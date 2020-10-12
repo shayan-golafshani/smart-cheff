@@ -1,7 +1,7 @@
 ## Summary
 
-SmartCheff is an app that allows the user to select any amount 
-of ingredients and are presented recipes that include those ingredients.
+SmartCheff is an app that allows the user to input any amount 
+of ingredients. The user is then presented recipes that include those ingredients.
 Picture being a student with the classic ingredient Top Ramen. When Top Ramen is selected as 
 an ingredient SmartCheff will display all the delicious ways to cook your Top Ramen.
 
