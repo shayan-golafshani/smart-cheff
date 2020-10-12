@@ -13,3 +13,4 @@ description: "The smart way to find recipes"
 author:
   name: "Alex Garber"
   
+theme: jekyll-theme-merlot
