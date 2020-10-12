@@ -41,4 +41,4 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 Example: Preheat smart oven
 
 ## Wireframe diagram
-![Wireframe diagram](img/wireframe.png)
+![Wireframe diagram](img/wireframe.png) 
