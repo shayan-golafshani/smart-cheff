@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.smartcheff;
+package edu.cnm.deepdive.smartcheff.controller;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;

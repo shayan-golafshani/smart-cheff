@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.smartcheff;
+package edu.cnm.deepdive.smartcheff.controller;
 
 import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -7,6 +7,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import edu.cnm.deepdive.smartcheff.R;
 
 public class MainActivity extends AppCompatActivity {
 
