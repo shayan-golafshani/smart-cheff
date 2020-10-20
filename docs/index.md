@@ -8,7 +8,7 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
  * The use of the users' camera: The camera will be used to input products as an ingredient by scanning the barcode of a product.
  * Ability to save recipes and ingredients used.
 
-## Intended users[![Intended users]()](work/intendedusers.md)
+## [Intended users](work/intendedusers.md)
 
 ## Wireframe diagram
 
