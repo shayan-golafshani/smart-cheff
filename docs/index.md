@@ -10,9 +10,9 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 ## [Intended users](work/intendedusers.md)
 
-## Wireframe diagram
+## [Wireframe diagram](work/wireframe.md)
 
-[![SmartCheff wireframe diagram](img/wireframe.png)](pdf/wireframe.pdf)
+
 
 
 

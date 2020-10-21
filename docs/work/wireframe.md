@@ -1,0 +1,1 @@
+[![SmartCheff wireframe diagram](img/wireframe.png)](pdf/wireframe.pdf)
