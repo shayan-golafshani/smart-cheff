@@ -16,9 +16,9 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 
 
-## Entity-Relationship Diagram 
+## [Entity-Relationship Diagram](work/ERD.md)
 
-[![SmartCheff ERD diagram](img/ERD.png)](pdf/ERD.pdf)
+
 
 
  

@@ -1,0 +1,1 @@
+[![SmartCheff ERD diagram](../img/ERD.png)](../pdf/ERD.pdf)
