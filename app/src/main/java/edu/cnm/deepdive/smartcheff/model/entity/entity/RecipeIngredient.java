@@ -22,7 +22,6 @@ public class RecipeIngredient {
   @ColumnInfo(name = "ingredient_id", index = true)
   private long ingredientId;
 
-
   @ColumnInfo(name = "recipe_id", index = true)
   private long recipeId;
 

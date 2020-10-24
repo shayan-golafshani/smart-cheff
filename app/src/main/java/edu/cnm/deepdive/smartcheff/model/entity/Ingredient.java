@@ -23,4 +23,6 @@ public class Ingredient {
   @ColumnInfo(name = "user_id",index = true)
   private long userid;
 
+  private String name;
+
 }
