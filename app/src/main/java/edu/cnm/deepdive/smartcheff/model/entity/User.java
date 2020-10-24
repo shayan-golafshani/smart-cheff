@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.smartcheff.model.entity.entity;
+package edu.cnm.deepdive.smartcheff.model.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

@@ -10,23 +10,23 @@ Note that the pairs of square brackets below are rendered as checkboxes in GitHu
 
 ### Create/insert
     
-* [ ] Single instance 
-* [ ] Multiple instances 
+* [x] Single instance 
+* [x] Multiple instances 
     
 ### Read/query/select
 
-* [ ] Single instance 
-* [ ] Multiple instances 
+* [x] Single instance 
+* [x] Multiple instances 
 
 ### Update
 
-* [ ] Single instance 
+* [x] Single instance 
 * [ ] Multiple instances 
 
 ### Delete
 
-* [ ] Single instance 
-* [ ] Multiple instances 
+* [x] Single instance 
+* [x] Multiple instances 
 
 
 ## Queries

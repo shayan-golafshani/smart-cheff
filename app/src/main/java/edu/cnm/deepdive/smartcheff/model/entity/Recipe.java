@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.smartcheff.model.entity.entity;
+package edu.cnm.deepdive.smartcheff.model.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -13,8 +13,10 @@ public class Recipe {
   @ColumnInfo(name = "recipe_id")
   private Long id;
 
+  @ColumnInfo(name = "instructions")
   private String instructions;
 
+  @ColumnInfo(name = "name")
   private String name;
 
   @ColumnInfo(name = "prep_time")
@@ -26,7 +28,7 @@ public class Recipe {
   @ColumnInfo(name = "serving_quantity")
   private int servingQuantity;
 
-
+  @ColumnInfo(name = "name_id")
   private Long userid;
 
 

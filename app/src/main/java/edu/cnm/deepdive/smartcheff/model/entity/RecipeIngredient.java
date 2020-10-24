@@ -1,10 +1,10 @@
-package edu.cnm.deepdive.smartcheff.model.entity.entity;
+package edu.cnm.deepdive.smartcheff.model.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-import edu.cnm.deepdive.smartcheff.model.entity.Ingredient;
+
 @Entity(
     foreignKeys = {
         @ForeignKey(entity = Ingredient.class,parentColumns = "ingredient_id", childColumns = "ingredient_id",
