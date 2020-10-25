@@ -67,11 +67,11 @@ Purpose
 
 Cardinality/modality
 
-: One Required 
+: One/Required 
  
 Filter
 
-: where name = name 
+: get id where name = name
  
 Sort order
 
