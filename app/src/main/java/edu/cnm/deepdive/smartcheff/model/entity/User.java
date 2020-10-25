@@ -14,4 +14,13 @@ public class User {
   @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
+  public long getId() {
+    return id;
+  }
+
+  public String getOauthKey() {
+    return oauthKey;
+  }
+
+
 }

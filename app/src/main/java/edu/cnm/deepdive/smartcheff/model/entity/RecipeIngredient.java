@@ -25,4 +25,15 @@ public class RecipeIngredient {
   @ColumnInfo(name = "recipe_id", index = true)
   private long recipeId;
 
+  public long getId() {
+    return id;
+  }
+
+  public long getIngredientId() {
+    return ingredientId;
+  }
+
+  public long getRecipeId() {
+    return recipeId;
+  }
 }

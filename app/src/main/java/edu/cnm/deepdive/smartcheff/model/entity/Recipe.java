@@ -13,6 +13,9 @@ public class Recipe {
   @ColumnInfo(name = "recipe_id")
   private Long id;
 
+  @ColumnInfo(name = "name_id")
+  private Long userid;
+
   @ColumnInfo(name = "instructions")
   private String instructions;
 
@@ -28,8 +31,51 @@ public class Recipe {
   @ColumnInfo(name = "serving_quantity")
   private int servingQuantity;
 
-  @ColumnInfo(name = "name_id")
-  private Long userid;
+  public String getInstructions() {
+    return instructions;
+  }
 
+  public void setInstructions(String instructions) {
+    this.instructions = instructions;
+  }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getPrepTime() {
+    return prepTime;
+  }
+
+  public void setPrepTime(int prepTime) {
+    this.prepTime = prepTime;
+  }
+
+  public int getSkillLevel() {
+    return skillLevel;
+  }
+
+  public void setSkillLevel(int skillLevel) {
+    this.skillLevel = skillLevel;
+  }
+
+  public int getServingQuantity() {
+    return servingQuantity;
+  }
+
+  public void setServingQuantity(int servingQuantity) {
+    this.servingQuantity = servingQuantity;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public Long getUserid() {
+    return userid;
+  }
 }
