@@ -27,6 +27,22 @@ public class Ingredient {
   @ColumnInfo(name = "name")
   private String name;
 
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public long getUserid() {
+    return userid;
+  }
+
+  public void setUserid(long userid) {
+    this.userid = userid;
+  }
+
   public int getQuantityAvailable() {
     return quantityAvailable;
   }
@@ -49,13 +65,5 @@ public class Ingredient {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public long getId() {
-    return id;
-  }
-
-  public long getUserid() {
-    return userid;
   }
 }

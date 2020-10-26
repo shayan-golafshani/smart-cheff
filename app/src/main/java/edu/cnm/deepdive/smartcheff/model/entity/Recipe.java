@@ -31,6 +31,22 @@ public class Recipe {
   @ColumnInfo(name = "serving_quantity")
   private int servingQuantity;
 
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public Long getUserid() {
+    return userid;
+  }
+
+  public void setUserid(Long userid) {
+    this.userid = userid;
+  }
+
   public String getInstructions() {
     return instructions;
   }
@@ -69,13 +85,5 @@ public class Recipe {
 
   public void setServingQuantity(int servingQuantity) {
     this.servingQuantity = servingQuantity;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public Long getUserid() {
-    return userid;
   }
 }

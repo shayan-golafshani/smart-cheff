@@ -29,11 +29,23 @@ public class RecipeIngredient {
     return id;
   }
 
+  public void setId(long id) {
+    this.id = id;
+  }
+
   public long getIngredientId() {
     return ingredientId;
   }
 
+  public void setIngredientId(long ingredientId) {
+    this.ingredientId = ingredientId;
+  }
+
   public long getRecipeId() {
     return recipeId;
+  }
+
+  public void setRecipeId(long recipeId) {
+    this.recipeId = recipeId;
   }
 }
