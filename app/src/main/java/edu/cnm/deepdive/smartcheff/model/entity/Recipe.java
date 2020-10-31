@@ -16,7 +16,7 @@ public class Recipe {
   private Long id;
 
   @NonNull
-  @ColumnInfo(name = "user_id")
+  @ColumnInfo(name = "user_id", index = true)
   private Long userid;
 
   @NonNull
