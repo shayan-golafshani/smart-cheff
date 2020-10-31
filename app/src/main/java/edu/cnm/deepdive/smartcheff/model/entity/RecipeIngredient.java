@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.smartcheff.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -18,10 +19,11 @@ public class RecipeIngredient {
   @ColumnInfo(name = "recipe_ingredient_id")
   private long id;
 
-
+  @NonNull
   @ColumnInfo(name = "ingredient_id", index = true)
   private long ingredientId;
 
+  @NonNull
   @ColumnInfo(name = "recipe_id", index = true)
   private long recipeId;
 

@@ -1,9 +1,11 @@
 package edu.cnm.deepdive.smartcheff.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+import io.reactivex.annotations.Nullable;
 
 
 @Entity(foreignKeys = {@ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id",
@@ -14,16 +16,19 @@ public class Ingredient {
   @ColumnInfo(name = "ingredient_id")
   private long id;
 
+  @NonNull
   @ColumnInfo(name = "user_id",index = true)
   private long userid;
 
+  @NonNull
   @ColumnInfo(name = "quantity_available")
   private int quantityAvailable;
 
+  @Nullable
   @ColumnInfo(name = "upc")
   private String upc;
 
-
+  @NonNull
   @ColumnInfo(name = "name")
   private String name;
 
