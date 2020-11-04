@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 import edu.cnm.deepdive.smartcheff.model.entity.User;
 import io.reactivex.Single;
 import java.util.Collection;
@@ -20,6 +21,16 @@ public interface UserDao {
   @Insert
   Single<List<Long>> insert(Collection<User> users);
 
+
+  @Update
+  Single<Integer> update(User user);
+
+  @Update
+  Single<Integer> update(User... users);
+
+  @Update
+  Single<Integer> update(Collection<User> users);
+
   @Delete
   Single<Integer> delete(User user);
 
@@ -28,5 +39,7 @@ public interface UserDao {
 
   @Delete
   Single<Integer>delete(Collection<User> users);
+
+
 
 }

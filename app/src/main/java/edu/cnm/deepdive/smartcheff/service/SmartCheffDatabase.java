@@ -5,7 +5,6 @@ import androidx.room.Database;
 import androidx.room.Room;
 import android.app.Application;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverters;
 import edu.cnm.deepdive.smartcheff.model.dao.IngredientDao;
 import edu.cnm.deepdive.smartcheff.model.dao.RecipeDao;
 import edu.cnm.deepdive.smartcheff.model.dao.RecipeIngredientDao;
@@ -17,6 +16,7 @@ import edu.cnm.deepdive.smartcheff.model.entity.User;
 
 
 @Database(entities = {Recipe.class, Ingredient.class, User.class, RecipeIngredient.class}, version = 1, exportSchema = true)
+
 public abstract class SmartCheffDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "SmartCheff_db";
@@ -31,13 +31,13 @@ public abstract class SmartCheffDatabase extends RoomDatabase {
     return InstanceHolder.INSTANCE;
   }
 
-  public abstract UserDao getScoreDao();
+  public abstract UserDao getUserDao();
 
-  public abstract RecipeDao getMatchDao();
+  public abstract RecipeDao getRecipeDao();
 
-  public abstract IngredientDao getGameDao();
+  public abstract IngredientDao getIngredientDao();
 
-  public abstract RecipeIngredientDao getGuessDao();
+  public abstract RecipeIngredientDao getRecipeIngredientDao();
 
 
   private static class InstanceHolder {

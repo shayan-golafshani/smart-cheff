@@ -8,13 +8,17 @@ import androidx.room.PrimaryKey;
 import io.reactivex.annotations.Nullable;
 
 
-@Entity(foreignKeys = {@ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id",
-onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)})
+@Entity(
+    foreignKeys = {
+        @ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id", onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)
+
+})
 public class Ingredient {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "ingredient_id")
   private long id;
+
 
   @NonNull
   @ColumnInfo(name = "user_id",index = true)
@@ -56,19 +60,21 @@ public class Ingredient {
     this.quantityAvailable = quantityAvailable;
   }
 
+  @Nullable
   public String getUpc() {
     return upc;
   }
 
-  public void setUpc(String upc) {
+  public void setUpc(@Nullable String upc) {
     this.upc = upc;
   }
 
+  @NonNull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@NonNull String name) {
     this.name = name;
   }
 }

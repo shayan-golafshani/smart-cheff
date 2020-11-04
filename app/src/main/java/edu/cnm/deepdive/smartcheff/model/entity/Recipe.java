@@ -7,8 +7,11 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import io.reactivex.annotations.Nullable;
 
-@Entity(foreignKeys = {@ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id",
-    onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)})
+@Entity(
+    foreignKeys =
+        {@ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id",
+    onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)
+    })
 public class Recipe {
 
   @PrimaryKey(autoGenerate = true)
@@ -22,6 +25,7 @@ public class Recipe {
   @NonNull
   @ColumnInfo(name = "instructions")
   private String instructions;
+
 
   @NonNull
   @ColumnInfo(name = "name")
@@ -47,27 +51,30 @@ public class Recipe {
     this.id = id;
   }
 
+  @NonNull
   public Long getUserid() {
     return userid;
   }
 
-  public void setUserid(Long userid) {
+  public void setUserid(@NonNull Long userid) {
     this.userid = userid;
   }
 
+  @NonNull
   public String getInstructions() {
     return instructions;
   }
 
-  public void setInstructions(String instructions) {
+  public void setInstructions(@NonNull String instructions) {
     this.instructions = instructions;
   }
 
+  @NonNull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@NonNull String name) {
     this.name = name;
   }
 
