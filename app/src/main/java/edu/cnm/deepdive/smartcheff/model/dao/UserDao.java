@@ -21,7 +21,6 @@ public interface UserDao {
   @Insert
   Single<List<Long>> insert(Collection<User> users);
 
-
   @Update
   Single<Integer> update(User user);
 
@@ -39,7 +38,4 @@ public interface UserDao {
 
   @Delete
   Single<Integer>delete(Collection<User> users);
-
-
-
 }
