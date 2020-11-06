@@ -15,13 +15,13 @@ import java.util.List;
 public interface IngredientDao {
 
   @Insert
-  Single<Long> insert(Ingredient ingredients);
+  Single<Long> insert(Ingredient ingredient);
 
   @Insert
-  Single<List<Long>> insert(Ingredient...users);
+  Single<List<Long>> insert(Ingredient... ingredients);
 
   @Insert
-  Single<List<Long>> insert(Collection<Ingredient> users);
+  Single<List<Long>> insert(Collection<Ingredient> ingredients);
 
   @Update
   Single<Integer> update(Ingredient ingredient);
@@ -36,7 +36,7 @@ public interface IngredientDao {
   Single<Integer> delete(Ingredient ingredients);
 
   @Delete
-  Single<Integer> delete(Ingredient...ingredients);
+  Single<Integer> delete(Ingredient... ingredients);
 
   @Delete
   Single<Integer>delete(Collection<Ingredient> ingredients);
@@ -45,11 +45,11 @@ public interface IngredientDao {
   @Query("SELECT * FROM Ingredient WHERE upc = :upc")
   LiveData<Ingredient> selectUsingUpc(String upc);
 
-  @Query("SELECT * FROM Ingredient WHERE name = :name")
-  LiveData<Ingredient> selectName(String name);
+  @Query("SELECT * FROM Ingredient WHERE name LIKE :name")
+  LiveData <List<Ingredient>> selectName(String name);
 
-  @Query("SELECT * FROM Ingredient WHERE quantity_available = :quantity_available")
-  LiveData<Ingredient> selectUsingQuantity(String quantity_available);
+  @Query("SELECT * FROM Ingredient WHERE quantity_available >= :quantityAvailable")
+  LiveData<List<Ingredient>> selectUsingQuantity(String quantityAvailable);
 
 
 }
