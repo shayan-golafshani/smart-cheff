@@ -38,4 +38,14 @@ public class IngredientRepository {
     return ingredientDao.selectName(String.format("%%%s%%", name));
   }
 
+
+  public LiveData<Ingredient> selectByUpc (Ingredient upc){
+    return ingredientDao.selectByUpc(upc.getUpc());
+  }
+
+
+  public LiveData<List<Ingredient>> selectByQuantity (Ingredient quantity){
+    return ingredientDao.selectByQuantity(quantity.getQuantityAvailable());
+  }
+
 }

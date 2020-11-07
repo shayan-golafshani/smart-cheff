@@ -43,13 +43,13 @@ public interface IngredientDao {
 
 
   @Query("SELECT * FROM Ingredient WHERE upc = :upc")
-  LiveData<Ingredient> selectUsingUpc(String upc);
+  LiveData<Ingredient> selectByUpc(String upc);
 
   @Query("SELECT * FROM Ingredient WHERE name LIKE :name")
   LiveData <List<Ingredient>> selectName(String name);
 
   @Query("SELECT * FROM Ingredient WHERE quantity_available >= :quantityAvailable")
-  LiveData<List<Ingredient>> selectUsingQuantity(String quantityAvailable);
+  LiveData<List<Ingredient>> selectByQuantity(int quantityAvailable);
 
 
 }
