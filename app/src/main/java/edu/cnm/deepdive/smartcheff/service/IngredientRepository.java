@@ -34,6 +34,7 @@ public class IngredientRepository {
             .ignoreElement();
   }
 
+
   public LiveData<List<Ingredient>> selectByName (String name){
     return ingredientDao.selectName(String.format("%%%s%%", name));
   }
