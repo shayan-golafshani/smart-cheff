@@ -40,6 +40,4 @@ public interface UserDao {
   @Delete
   Single<Integer>delete(Collection<User> users);
 
-
-
 }
