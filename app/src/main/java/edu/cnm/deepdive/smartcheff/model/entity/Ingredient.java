@@ -10,7 +10,11 @@ import io.reactivex.annotations.Nullable;
 
 @Entity(
     foreignKeys = {
-        @ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id", onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)
+        @ForeignKey(entity = User.class,
+            parentColumns = "user_id",
+            childColumns = "user_id",
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE)
 
 })
 public class Ingredient {

@@ -29,19 +29,23 @@ public class RecipeRepository {
             .ignoreElement();
   }
 
-  public Completable delete(Recipe recipe){
+  public Completable delete(Recipe recipe) {
     return (recipe.getId() == 0)
         ? Completable.complete()
         : recipeDao.delete(recipe)
             .ignoreElement();
   }
 
-  public LiveData<Recipe> findByName (Recipe name){
+  public LiveData<Recipe> findByName(Recipe name) {
     return recipeDao.findByName(name.getName());
   }
 
-  public LiveData<List<Recipe>> findRecipeUsingIngredient (Recipe id){
+  public LiveData<List<Recipe>> findRecipeUsingIngredient(Recipe id) {
     return recipeDao.findRecipeUsingIngredient(id.getId());
+  }
+
+  public LiveData<List<Recipe>> findById(Recipe id) {
+    return recipeDao.findById(id.getId());
   }
 
 }

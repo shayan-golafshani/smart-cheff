@@ -8,10 +8,17 @@ import androidx.room.PrimaryKey;
 
 @Entity(
     foreignKeys = {
-        @ForeignKey(entity = Ingredient.class,parentColumns = "ingredient_id", childColumns = "ingredient_id",
-        onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE),
-        @ForeignKey(entity = Recipe.class,parentColumns = "recipe_id",childColumns = "recipe_id",
-        onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)
+        @ForeignKey(
+            entity = Ingredient.class,
+            parentColumns = "ingredient_id",
+            childColumns = "ingredient_id",
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE),
+        @ForeignKey(entity = Recipe.class,
+            parentColumns = "recipe_id",
+            childColumns = "recipe_id",
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE)
     }
 )
 public class RecipeIngredient {
