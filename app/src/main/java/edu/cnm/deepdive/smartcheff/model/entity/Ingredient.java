@@ -8,9 +8,14 @@ import androidx.room.PrimaryKey;
 import io.reactivex.annotations.Nullable;
 
 
+@SuppressWarnings("NotNullFieldNotInitialized")
 @Entity(
     foreignKeys = {
-        @ForeignKey(entity = User.class,parentColumns = "user_id",childColumns = "user_id", onDelete = ForeignKey.CASCADE,onUpdate = ForeignKey.CASCADE)
+        @ForeignKey(entity = User.class,
+            parentColumns = "user_id",
+            childColumns = "user_id",
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE)
 
 })
 public class Ingredient {
@@ -20,11 +25,12 @@ public class Ingredient {
   private long id;
 
 
+  @SuppressWarnings("NullableProblems")
   @NonNull
   @ColumnInfo(name = "user_id",index = true)
   private long userid;
 
-  @NonNull
+
   @ColumnInfo(name = "quantity_available")
   private int quantityAvailable;
 

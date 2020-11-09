@@ -1,10 +1,12 @@
 package edu.cnm.deepdive.smartcheff.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+import edu.cnm.deepdive.smartcheff.model.entity.Recipe;
 import edu.cnm.deepdive.smartcheff.model.entity.User;
 import io.reactivex.Single;
 import java.util.Collection;
@@ -20,6 +22,7 @@ public interface UserDao {
 
   @Insert
   Single<List<Long>> insert(Collection<User> users);
+
 
   @Update
   Single<Integer> update(User user);
@@ -38,4 +41,10 @@ public interface UserDao {
 
   @Delete
   Single<Integer>delete(Collection<User> users);
+
+  @Query("SELECT * FROM User WHERE user_id = :id")
+  LiveData<User> findCurrentUser (long id);
+
+  @Query("SELECT * FROM User ")
+  LiveData<User>  getAll ();
 }

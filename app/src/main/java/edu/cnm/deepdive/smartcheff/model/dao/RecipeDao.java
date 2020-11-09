@@ -45,7 +45,11 @@ public interface RecipeDao {
   LiveData<List<Recipe>> findRecipeUsingIngredient (long ingredientId);
 
   @Query("SELECT * FROM Recipe WHERE name = :name")
-  LiveData<Recipe> findRecipeUsingName (String name);
+  LiveData<Recipe> findByName (String name);
 
+  @Query("SELECT * FROM Recipe WHERE recipe_id = :recipeId")
+  LiveData<List<Recipe>> findById (long recipeId);
 
+  @Query("SELECT * FROM Recipe")
+  LiveData<List<Recipe>> getAll ();
 }

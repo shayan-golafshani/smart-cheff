@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.smartcheff.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -11,7 +12,7 @@ public class User {
   @ColumnInfo(name = "user_id")
   private long id;
 
-  @ColumnInfo(name = "oauth_key")
+  @ColumnInfo(name = "oauth_key",index = true)
   private String oauthKey;
 
   public long getId() {
