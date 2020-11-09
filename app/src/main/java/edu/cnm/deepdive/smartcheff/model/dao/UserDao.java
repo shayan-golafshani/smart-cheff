@@ -45,4 +45,6 @@ public interface UserDao {
   @Query("SELECT * FROM User WHERE user_id = :id")
   LiveData<User> findCurrentUser (long id);
 
+  @Query("SELECT * FROM User ")
+  LiveData<User>  getAll ();
 }

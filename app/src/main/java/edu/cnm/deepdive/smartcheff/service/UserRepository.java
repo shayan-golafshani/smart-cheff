@@ -9,6 +9,7 @@ import edu.cnm.deepdive.smartcheff.model.entity.User;
 import io.reactivex.Completable;
 
 public class UserRepository {
+
   private final Context context;
 
   private final UserDao userDao;
@@ -23,11 +24,11 @@ public class UserRepository {
         ? userDao.insert(user)
         .doAfterSuccess(user::setId)
         .ignoreElement()
-          : userDao.update(user)
+        : userDao.update(user)
             .ignoreElement();
   }
 
-  public Completable delete(User user){
+  public Completable delete(User user) {
     return (user.getId() == 0)
         ? Completable.complete()
         : userDao.delete(user)
@@ -35,8 +36,11 @@ public class UserRepository {
   }
 
 
-  public LiveData<User> findCurrentUser (User user){
+  public LiveData<User> findCurrentUser(User user) {
     return userDao.findCurrentUser(user.getId());
   }
 
+  public LiveData<User> getAll(User user) {
+    return userDao.findCurrentUser(user.getId());
+  }
 }

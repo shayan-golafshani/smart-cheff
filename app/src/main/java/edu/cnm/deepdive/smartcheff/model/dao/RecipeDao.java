@@ -49,4 +49,7 @@ public interface RecipeDao {
 
   @Query("SELECT * FROM Recipe WHERE recipe_id = :recipeId")
   LiveData<List<Recipe>> findById (long recipeId);
+
+  @Query("SELECT * FROM Recipe")
+  LiveData<List<Recipe>> getAll ();
 }

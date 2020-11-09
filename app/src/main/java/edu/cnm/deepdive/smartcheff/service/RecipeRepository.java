@@ -35,7 +35,10 @@ public class RecipeRepository {
         : recipeDao.delete(recipe)
             .ignoreElement();
   }
+  public LiveData<List<Recipe>> getAll() {
+    return recipeDao.getAll();
 
+  }
   public LiveData<Recipe> findByName(Recipe name) {
     return recipeDao.findByName(name.getName());
   }

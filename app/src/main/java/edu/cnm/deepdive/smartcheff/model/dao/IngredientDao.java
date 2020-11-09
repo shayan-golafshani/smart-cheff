@@ -51,5 +51,6 @@ public interface IngredientDao {
   @Query("SELECT * FROM Ingredient WHERE quantity_available >= :quantityAvailable")
   LiveData<List<Ingredient>> selectByQuantity(int quantityAvailable);
 
-
+  @Query("SELECT * FROM Ingredient")
+  LiveData <List<Ingredient>> getAll();
 }
