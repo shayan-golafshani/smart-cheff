@@ -23,3 +23,5 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 ## [Dao Interface Classes](https://github.com/Alex-Garber/smart-cheff/tree/master/app/src/main/java/edu/cnm/deepdive/smartcheff/model/dao)
 
 ## [Database Class](https://github.com/Alex-Garber/smart-cheff/blob/master/app/src/main/java/edu/cnm/deepdive/smartcheff/service/SmartCheffDatabase.java)
+
+## [DDL](https://github.com/Alex-Garber/smart-cheff/blob/master/docs/sql/ddl.sql)
