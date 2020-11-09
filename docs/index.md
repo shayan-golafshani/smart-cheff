@@ -13,11 +13,9 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 ## [Wireframe diagram](work/wireframe.md)
 
-
-
-
-
 ## [Entity-Relationship Diagram](work/ERD.md)
+
+## [Entity classes](work/entityclasses.md)
 
 
 
