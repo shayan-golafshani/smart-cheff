@@ -8,21 +8,7 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
  * The use of the users' camera: The camera will be used to input products as an ingredient by scanning the barcode of a product.
  * Ability to save recipes and ingredients used.
 
-## Cloud- or device-based services or data:
-* Users camera: 
-  * The camera will be used to input products as an ingredient by scanning the barcode of a product.
-  * <https://developer.android.com/reference/android/hardware/Camera>
-   * This app will be able to function without the camera but will not be able to input products as ingredients using a barcode.
-   
-* Bar code monster Api:
-  * <https://rapidapi.com/jonata/api/barcode-monster/endpoints>
-  * This web service will allow the app to look up a product using a upc barcode, so i can then input the product as an ingredient.
-  * This app will be able to function without this service, but the camera input of an ingredient will not.
- 
-* Spoonacular Api:
-  * <https://spoonacular.com/food-api/docs>
-  * This web service will allow the app to use the inputted ingredients in a search of recipes.
-  * The app will not function without this service.
+## [Cloud- or device-based services:](work/cdservices.md)
 
 ## [Intended users](work/intendedusers.md)
 
@@ -32,6 +18,8 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 ## [Entity Classes](work/entityclasses.md)
 
+## [Repository Classes](work/repositoryclasses.md)
+
 ## [Dao Interface Classes](https://github.com/Alex-Garber/smart-cheff/tree/master/app/src/main/java/edu/cnm/deepdive/smartcheff/model/dao)
 
-## [Repository Classes and Database Class](https://github.com/Alex-Garber/smart-cheff/tree/master/app/src/main/java/edu/cnm/deepdive/smartcheff/service)
+## [Database Class](https://github.com/Alex-Garber/smart-cheff/blob/master/app/src/main/java/edu/cnm/deepdive/smartcheff/service/SmartCheffDatabase.java)
