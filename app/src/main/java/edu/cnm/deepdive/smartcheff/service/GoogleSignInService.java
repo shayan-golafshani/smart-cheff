@@ -74,7 +74,7 @@ public class GoogleSignInService {
     this.account = account;
     if (account != null) {
       //noinspection ConstantConditions
-      Log.d(getClass().getSimpleName(), account.getIdToken());
+     // Log.d(getClass().getSimpleName(), account.getIdToken());
     }
   }
 

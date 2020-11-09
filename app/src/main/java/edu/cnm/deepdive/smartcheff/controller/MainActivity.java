@@ -1,6 +1,9 @@
 package edu.cnm.deepdive.smartcheff.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -8,8 +11,44 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import edu.cnm.deepdive.smartcheff.R;
+import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity {
+
+
+  @Override
+  public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    boolean handled = true;
+    //noinspection SwitchStatementWithTooFewBranches
+    switch (item.getItemId()) {
+      case R.id.sign_out:
+        logout();
+        break;
+      default:
+        handled = super.onOptionsItemSelected(item);
+    }
+    return handled;
+  }
+
+
+  @Override
+  public boolean onSupportNavigateUp() {
+    onBackPressed();
+    return true;
+  }
+
+
+  private void logout() {
+    GoogleSignInService.getInstance().signOut()
+        .addOnCompleteListener((ignored) -> {
+
+          Intent intent = new Intent(this, LoginActivity.class)
+              .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+          startActivity(intent);
+
+        });
+  }
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
