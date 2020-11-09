@@ -6,6 +6,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+@SuppressWarnings("NullableProblems")
 @Entity(
     foreignKeys = {
         @ForeignKey(

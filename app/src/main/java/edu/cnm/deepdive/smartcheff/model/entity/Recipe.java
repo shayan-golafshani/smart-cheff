@@ -7,6 +7,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import io.reactivex.annotations.Nullable;
 
+@SuppressWarnings("NotNullFieldNotInitialized")
 @Entity(
     foreignKeys =
         {@ForeignKey(
@@ -35,15 +36,15 @@ public class Recipe {
   @ColumnInfo(name = "name")
   private String name;
 
-  @Nullable
+
   @ColumnInfo(name = "prep_time")
   private int prepTime;
 
-  @Nullable
+
   @ColumnInfo(name = "skill_level")
   private int skillLevel;
 
-  @Nullable
+
   @ColumnInfo(name = "serving_quantity")
   private int servingQuantity;
 
