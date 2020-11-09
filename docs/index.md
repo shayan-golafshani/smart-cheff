@@ -30,4 +30,8 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 ## [Entity-Relationship Diagram](work/ERD.md)
 
-## [Entity classes](work/entityclasses.md)
+## [Entity Classes](work/entityclasses.md)
+
+## [Dao Interface Classes](https://github.com/Alex-Garber/smart-cheff/tree/master/app/src/main/java/edu/cnm/deepdive/smartcheff/model/dao)
+
+## [Repository Classes and Database Class](https://github.com/Alex-Garber/smart-cheff/tree/master/app/src/main/java/edu/cnm/deepdive/smartcheff/service)

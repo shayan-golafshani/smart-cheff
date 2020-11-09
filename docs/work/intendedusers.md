@@ -1,4 +1,4 @@
-## Intended users
+## [Intended users](https://github.com/Alex-Garber/smart-cheff/blob/master/docs/work/intendedusers.md)
  * low-income user: 
  > As a low-income user with a limited budget. I want to use SmartCheff because it allows me to input ingredients I have on hand and be presented with a list of new ways to combine and cook meals with those ingredients. 
  * professional Chef
