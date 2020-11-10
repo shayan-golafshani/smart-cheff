@@ -102,4 +102,7 @@ dependencies {
 
     //Google sign In
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+    // Preferences/settings dependencies
+    implementation 'androidx.preference:preference:1.1.1'
 }
