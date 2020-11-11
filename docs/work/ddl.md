@@ -1,3 +1,6 @@
+## [DDL](https://github.com/Alex-Garber/smart-cheff/blob/master/docs/sql/ddl.sql)
+
+```sqlite
 CREATE TABLE IF NOT EXISTS `Recipe`
 (
     `recipe_id`        INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,3 +47,4 @@ CREATE TABLE IF NOT EXISTS `RecipeIngredient`
 CREATE INDEX IF NOT EXISTS `index_RecipeIngredient_ingredient_id` ON `RecipeIngredient` (`ingredient_id`);
 
 CREATE INDEX IF NOT EXISTS `index_RecipeIngredient_recipe_id` ON `RecipeIngredient` (`recipe_id`);
+```
