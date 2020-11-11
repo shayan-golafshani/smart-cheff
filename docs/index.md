@@ -24,4 +24,4 @@ an ingredient SmartCheff will display all the delicious ways to cook your Top Ra
 
 ## [Database Class](https://github.com/Alex-Garber/smart-cheff/blob/master/app/src/main/java/edu/cnm/deepdive/smartcheff/service/SmartCheffDatabase.java)
 
-## [DDL](https://github.com/Alex-Garber/smart-cheff/blob/master/docs/sql/ddl.sql)
+## [DDL](work/ddl.md)
