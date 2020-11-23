@@ -8,6 +8,11 @@ import edu.cnm.deepdive.smartcheff.model.entity.Recipe;
 import edu.cnm.deepdive.smartcheff.model.entity.User;
 import io.reactivex.Completable;
 
+/**
+ * This Repository contains a get get all method. As of now the get all method will not be used
+ * because there is no need to get all the users.
+ *
+ */
 public class UserRepository {
 
   private final Context context;
