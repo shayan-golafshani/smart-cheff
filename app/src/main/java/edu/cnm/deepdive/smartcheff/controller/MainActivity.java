@@ -11,10 +11,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import edu.cnm.deepdive.smartcheff.R;
+import edu.cnm.deepdive.smartcheff.databinding.ActivityMainBinding;
 import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity {
 
+  ActivityMainBinding binding;
 
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -64,5 +66,6 @@ public class MainActivity extends AppCompatActivity {
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     NavigationUI.setupWithNavController(navView, navController);
   }
+
 
 }

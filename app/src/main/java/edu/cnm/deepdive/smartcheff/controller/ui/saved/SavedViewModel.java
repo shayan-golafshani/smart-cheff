@@ -10,7 +10,6 @@ public class SavedViewModel extends ViewModel {
 
   public SavedViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("");
   }
 
   public LiveData<String> getText() {

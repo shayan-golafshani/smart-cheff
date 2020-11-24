@@ -14,6 +14,7 @@ import androidx.viewbinding.ViewBinding;
 import edu.cnm.deepdive.smartcheff.R;
 import edu.cnm.deepdive.smartcheff.controller.ui.recipes.RecipesFragment;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentIngredientBinding;
+import java.util.zip.Inflater;
 import org.jetbrains.annotations.NotNull;
 
 public class IngredientFragment extends Fragment {
@@ -49,6 +50,12 @@ public class IngredientFragment extends Fragment {
     // Get reference to view model and set observers on live data.
   }
 
+private void findRecipes(Inflater inflater) {
+    binding.recipeButton.setOnClickListener((v) -> {
+    RecipesFragment.createInstance();
+    });
+
+}
 
 //  public enum Variation {
 //    AVAILABLE, CURRENT, CLOSED;
