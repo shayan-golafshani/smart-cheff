@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.smartcheff.ui.dashboard;
+package edu.cnm.deepdive.smartcheff.controller.ui.saved;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class SavedViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public DashboardViewModel() {
+  public SavedViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is dashboard fragment");
+    mText.setValue("This is notifications fragment");
   }
 
   public LiveData<String> getText() {

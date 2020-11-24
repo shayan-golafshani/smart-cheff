@@ -3,23 +3,29 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@+id/navigation_home">
+  app:startDestination="@+id/navigation_ingredient">
 
   <fragment
-    android:id="@+id/navigation_home"
-    android:label="@string/title_home"
-    android:name="edu.cnm.deepdive.smartcheff.ui.home.HomeFragment"
-    tools:layout="@layout/fragment_home"/>
+    android:id="@+id/navigation_ingredient"
+    android:label="@string/title_ingredient"
+    android:name="edu.cnm.deepdive.smartcheff.controller.ui.ingredientinput.IngredientFragment"
+    tools:layout="@layout/fragment_ingredient"/>
 
   <fragment
-    android:id="@+id/navigation_dashboard"
-    android:label="@string/title_dashboard"
-    android:name="edu.cnm.deepdive.smartcheff.ui.dashboard.DashboardFragment"
-    tools:layout="@layout/fragment_dashboard"/>
+    android:id="@+id/navigation_recipes"
+    android:label="@string/title_recipes"
+    android:name="edu.cnm.deepdive.smartcheff.controller.ui.recipes.RecipesFragment"
+    tools:layout="@layout/fragment_recipes"/>
 
   <fragment
-    android:id="@+id/navigation_notifications"
-    android:label="@string/title_notifications"
-    android:name="edu.cnm.deepdive.smartcheff.ui.notifications.NotificationsFragment"
-    tools:layout="@layout/fragment_notifications"/>
+    android:id="@+id/navigation_saved"
+    android:label="@string/title_saved"
+    android:name="edu.cnm.deepdive.smartcheff.controller.ui.saved.SavedFragment"
+    tools:layout="@layout/fragment_saved"/>
+
+  <fragment
+    android:id="@+id/navigation_camera"
+    android:label="Camera"
+    android:name="edu.cnm.deepdive.smartcheff.controller.ui.camera.CameraFragment"
+    tools:layout="@layout/fragment_camera"/>
 </navigation>

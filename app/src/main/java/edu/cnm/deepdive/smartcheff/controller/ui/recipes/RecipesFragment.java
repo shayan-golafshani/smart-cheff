@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.smartcheff.ui.notifications;
+package edu.cnm.deepdive.smartcheff.controller.ui.recipes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,17 +12,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.smartcheff.R;
 
-public class NotificationsFragment extends Fragment {
+public class RecipesFragment extends Fragment {
 
-  private NotificationsViewModel notificationsViewModel;
+  private RecipesViewModel recipesViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    notificationsViewModel =
-        ViewModelProviders.of(this).get(NotificationsViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-    final TextView textView = root.findViewById(R.id.text_notifications);
-    notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    recipesViewModel =
+        ViewModelProviders.of(this).get(RecipesViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_recipes, container, false);
+    final TextView textView = root.findViewById(R.id.text_dashboard);
+    recipesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);
