@@ -11,23 +11,51 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.smartcheff.R;
+import edu.cnm.deepdive.smartcheff.databinding.FragmentSavedBinding;
+import org.jetbrains.annotations.NotNull;
 
 public class SavedFragment extends Fragment {
+  private FragmentSavedBinding binding;
 
-  private SavedViewModel savedViewModel;
+  public static SavedFragment createInstance(/* params to pass to fragment*/) {
+    SavedFragment fragment = new SavedFragment();
+    Bundle args = new Bundle();
+    //Add param values to args, args.put???()
+    fragment.setArguments(args);
+    return fragment;
 
-  public View onCreateView(@NonNull LayoutInflater inflater,
-      ViewGroup container, Bundle savedInstanceState) {
-    savedViewModel =
-        ViewModelProviders.of(this).get(SavedViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_saved, container, false);
-    final TextView textView = root.findViewById(R.id.text_notifications);
-    savedViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
-    });
-    return root;
   }
+
+
+  @Override
+  public void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    Bundle args = getArguments();
+    //Do whatever is necessary with args
+  }
+
+  @Nullable
+  @Override
+  public View onCreateView(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    binding = FragmentSavedBinding.inflate(inflater);
+    //noinspection ConstantConditions
+
+
+    return binding.getRoot();
+  }
+
+  @Override
+  public void onViewCreated(@NonNull @NotNull View view,
+      @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    // Get reference to view model and set observers on live data.
+  }
+
+
 }
+
+
+
+
+

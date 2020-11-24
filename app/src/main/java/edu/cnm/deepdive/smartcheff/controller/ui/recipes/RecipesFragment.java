@@ -4,30 +4,51 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import edu.cnm.deepdive.smartcheff.R;
+
+import edu.cnm.deepdive.smartcheff.databinding.FragmentRecipesBinding;
+import org.jetbrains.annotations.NotNull;
 
 public class RecipesFragment extends Fragment {
 
-  private RecipesViewModel recipesViewModel;
+  FragmentRecipesBinding binding;
 
-  public View onCreateView(@NonNull LayoutInflater inflater,
-      ViewGroup container, Bundle savedInstanceState) {
-    recipesViewModel =
-        ViewModelProviders.of(this).get(RecipesViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_recipes, container, false);
-    final TextView textView = root.findViewById(R.id.text_dashboard);
-    recipesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
-    });
-    return root;
+  public static RecipesFragment createInstance(/* params to pass to fragment*/) {
+   RecipesFragment fragment = new RecipesFragment();
+    Bundle args = new Bundle();
+    //Add param values to args, args.put???()
+    fragment.setArguments(args);
+    return fragment;
+
   }
+  @Nullable
+  @Override
+  public View onCreateView(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    binding = FragmentRecipesBinding.inflate(inflater);
+    //noinspection ConstantConditions
+
+    // THe stuff down bellow allows us to display multiple variations of a fragment.
+//    Variation variation = MatchFragmentArgs.fromBundle(getArguments()).getVariation();
+//    binding.placeholder.setText(variation.toString());
+    // Access references in binding to set contents of view objects, as appropriate.
+    return binding.getRoot();
+  }
+
+  @Override
+  public void onViewCreated(@NonNull @NotNull View view,
+      @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    // Get reference to view model and set observers on live data.
+  }
+
+
+//  public enum Variation {
+//    AVAILABLE, CURRENT, CLOSED;
+//  }
+
+
 }
