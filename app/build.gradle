@@ -26,6 +26,10 @@ android {
         def connection_properties = "$projectDir/../../../services/smartcheff.properties"
         buildConfigField "String", "CLIENT_ID",
                 quoted(getProperty(connection_properties, "client_id"))
+        buildConfigField "String", "BASE_URL",
+                quoted(getProperty(connection_properties, "base_url"))
+        buildConfigField "String", "API_KEY",
+                quoted(getProperty(connection_properties, "api_key"))
 
 
         javaCompileOptions {
@@ -105,4 +109,6 @@ dependencies {
 
     // Preferences/settings dependencies
     implementation 'androidx.preference:preference:1.1.1'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

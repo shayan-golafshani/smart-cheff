@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "10e1f7c6397f1d30410923abbc62da5e",
+    "identityHash": "8d721644e14fa8f3cd6ac122bb0ea726",
     "entities": [
       {
         "tableName": "Recipe",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipe_id` INTEGER PRIMARY KEY AUTOINCREMENT, `user_id` INTEGER NOT NULL, `instructions` TEXT NOT NULL, `name` TEXT NOT NULL, `prep_time` INTEGER NOT NULL, `skill_level` INTEGER NOT NULL, `serving_quantity` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipe_id` INTEGER PRIMARY KEY AUTOINCREMENT, `user_id` INTEGER NOT NULL, `external_key` INTEGER NOT NULL, `instructions` TEXT, `name` TEXT NOT NULL, `image` TEXT, `prep_time` INTEGER NOT NULL, `skill_level` INTEGER NOT NULL, `serving_quantity` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE CASCADE ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -21,16 +21,28 @@
             "notNull": true
           },
           {
+            "fieldPath": "externalKey",
+            "columnName": "external_key",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
             "fieldPath": "instructions",
             "columnName": "instructions",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "name",
             "columnName": "name",
             "affinity": "TEXT",
             "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "prepTime",
@@ -58,6 +70,14 @@
           "autoGenerate": true
         },
         "indices": [
+          {
+            "name": "index_Recipe_external_key",
+            "unique": true,
+            "columnNames": [
+              "external_key"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Recipe_external_key` ON `${TABLE_NAME}` (`external_key`)"
+          },
           {
             "name": "index_Recipe_user_id",
             "unique": false,
@@ -257,7 +277,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '10e1f7c6397f1d30410923abbc62da5e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8d721644e14fa8f3cd6ac122bb0ea726')"
     ]
   }
 }

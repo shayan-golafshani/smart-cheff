@@ -4,19 +4,26 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import io.reactivex.annotations.Nullable;
 
 @SuppressWarnings("NotNullFieldNotInitialized")
 @Entity(
-    foreignKeys =
-        {@ForeignKey(
+    foreignKeys = {
+        @ForeignKey(
             entity = User.class,
             parentColumns = "user_id",
             childColumns = "user_id",
             onDelete = ForeignKey.CASCADE,
             onUpdate = ForeignKey.CASCADE)
-    })
+    },
+    indices = {
+        @Index(value = {"external_key"}, unique = true)
+    }
+)
 public class Recipe {
 
   @PrimaryKey(autoGenerate = true)
@@ -27,15 +34,23 @@ public class Recipe {
   @ColumnInfo(name = "user_id", index = true)
   private Long userid;
 
-  @NonNull
-  @ColumnInfo(name = "instructions")
+  @ColumnInfo(name = "external_key")
+  @Expose
+  @SerializedName("id")
+  private long externalKey;
+
+
   private String instructions;
 
 
   @NonNull
   @ColumnInfo(name = "name")
+  @Expose
+  @SerializedName("title")
   private String name;
 
+  @Expose
+  private String image;
 
   @ColumnInfo(name = "prep_time")
   private int prepTime;
@@ -65,12 +80,19 @@ public class Recipe {
     this.userid = userid;
   }
 
-  @NonNull
+  public long getExternalKey() {
+    return externalKey;
+  }
+
+  public void setExternalKey(long externalKey) {
+    this.externalKey = externalKey;
+  }
+
   public String getInstructions() {
     return instructions;
   }
 
-  public void setInstructions(@NonNull String instructions) {
+  public void setInstructions(String instructions) {
     this.instructions = instructions;
   }
 
@@ -81,6 +103,14 @@ public class Recipe {
 
   public void setName(@NonNull String name) {
     this.name = name;
+  }
+
+  public String getImage() {
+    return image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
   }
 
   public int getPrepTime() {

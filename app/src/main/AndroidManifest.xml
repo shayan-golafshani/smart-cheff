@@ -8,9 +8,9 @@
   <application
     android:name=".SmartCheffApplication"
     android:allowBackup="false"
-    android:icon="@mipmap/ic_launcher"
+    android:icon="@mipmap/ic_lsmartcheff_auncher"
     android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
+    android:roundIcon="@mipmap/ic_lsmartcheff_auncher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewbinding.ViewBinding;
 import edu.cnm.deepdive.smartcheff.R;
@@ -19,7 +20,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class IngredientFragment extends Fragment {
 
-  FragmentIngredientBinding binding;
+  private FragmentIngredientBinding binding;
+  private IngredientViewModel viewModel;
 
   public static IngredientFragment createInstance(/* params to pass to fragment*/) {
     IngredientFragment fragment = new IngredientFragment();
@@ -48,6 +50,8 @@ public class IngredientFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     // Get reference to view model and set observers on live data.
+    viewModel = new ViewModelProvider(this).get(IngredientViewModel.class);
+    // TODO obserive live data as nedded
   }
 
 private void findRecipes(Inflater inflater) {
