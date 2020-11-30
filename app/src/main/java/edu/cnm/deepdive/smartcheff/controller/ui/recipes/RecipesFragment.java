@@ -5,16 +5,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import edu.cnm.deepdive.smartcheff.databinding.FragmentRecipesBinding;
+import edu.cnm.deepdive.smartcheff.model.dto.RecipeDto;
+import java.util.ArrayList;
+import java.util.List;
 import org.jetbrains.annotations.NotNull;
+
+
 
 public class RecipesFragment extends Fragment {
 
+  List<RecipeDto> recipeItems = new ArrayList<RecipeDto>();
+
+  ArrayAdapter<RecipeDto> adapter;
+
   FragmentRecipesBinding binding;
+
+  private ListView recipeListView;
 
   public static RecipesFragment createInstance(/* params to pass to fragment*/) {
    RecipesFragment fragment = new RecipesFragment();
@@ -24,6 +37,8 @@ public class RecipesFragment extends Fragment {
     return fragment;
 
   }
+
+
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,
@@ -44,6 +59,7 @@ public class RecipesFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     // Get reference to view model and set observers on live data.
   }
+
 
 
 //  public enum Variation {

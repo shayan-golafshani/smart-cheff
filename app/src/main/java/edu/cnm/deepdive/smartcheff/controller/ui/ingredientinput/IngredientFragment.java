@@ -51,6 +51,7 @@ public class IngredientFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     // Get reference to view model and set observers on live data.
     viewModel = new ViewModelProvider(this).get(IngredientViewModel.class);
+
     // TODO obserive live data as nedded
   }
 

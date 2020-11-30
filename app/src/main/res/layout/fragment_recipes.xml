@@ -7,15 +7,16 @@
   android:layout_height="match_parent"
   tools:context=".controller.ui.recipes.RecipesFragment">
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/guess_list"
+  <ListView
+    android:id="@+id/recipe_list"
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:orientation="vertical"
     android:background="#B10909"
     android:padding="@dimen/half_margin"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:divider="#070707"
+    android:dividerHeight="1dp"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"/>
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:listSelector="#0f0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
