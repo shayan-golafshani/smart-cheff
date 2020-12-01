@@ -14,43 +14,46 @@ import edu.cnm.deepdive.smartcheff.R;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentSavedBinding;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This fragment is unimplemented.
+ */
 public class SavedFragment extends Fragment {
-  private FragmentSavedBinding binding;
-
-  public static SavedFragment createInstance(/* params to pass to fragment*/) {
-    SavedFragment fragment = new SavedFragment();
-    Bundle args = new Bundle();
-    //Add param values to args, args.put???()
-    fragment.setArguments(args);
-    return fragment;
-
-  }
-
-
-  @Override
-  public void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    Bundle args = getArguments();
-    //Do whatever is necessary with args
-  }
-
-  @Nullable
-  @Override
-  public View onCreateView(@NonNull LayoutInflater inflater,
-      @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    binding = FragmentSavedBinding.inflate(inflater);
-    //noinspection ConstantConditions
-
-
-    return binding.getRoot();
-  }
-
-  @Override
-  public void onViewCreated(@NonNull @NotNull View view,
-      @Nullable Bundle savedInstanceState) {
-    super.onViewCreated(view, savedInstanceState);
-    // Get reference to view model and set observers on live data.
-  }
+//  private FragmentSavedBinding binding;
+//
+//  public static SavedFragment createInstance(/* params to pass to fragment*/) {
+//    SavedFragment fragment = new SavedFragment();
+//    Bundle args = new Bundle();
+//    //Add param values to args, args.put???()
+//    fragment.setArguments(args);
+//    return fragment;
+//
+//  }
+//
+//
+//  @Override
+//  public void onCreate(@Nullable Bundle savedInstanceState) {
+//    super.onCreate(savedInstanceState);
+//    Bundle args = getArguments();
+//    //Do whatever is necessary with args
+//  }
+//
+//  @Nullable
+//  @Override
+//  public View onCreateView(@NonNull LayoutInflater inflater,
+//      @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//    binding = FragmentSavedBinding.inflate(inflater);
+//    //noinspection ConstantConditions
+//
+//
+//    return binding.getRoot();
+//  }
+//
+//  @Override
+//  public void onViewCreated(@NonNull @NotNull View view,
+//      @Nullable Bundle savedInstanceState) {
+//    super.onViewCreated(view, savedInstanceState);
+//    // Get reference to view model and set observers on live data.
+//  }
 
 
 }

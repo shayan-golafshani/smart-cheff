@@ -18,11 +18,25 @@ import edu.cnm.deepdive.smartcheff.databinding.FragmentIngredientBinding;
 import java.util.zip.Inflater;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This class holds the logic for the ingredient fragment.
+ */
 public class IngredientFragment extends Fragment {
 
+  /**
+   * This field is a reference to FragmentIngredientBinding.
+   */
   private FragmentIngredientBinding binding;
+
+  /**
+   * This field is a reference to the Ingredient view model.
+   */
   private IngredientViewModel viewModel;
 
+  /**
+   * This the constructor for the IngredientFragment class.
+   * @return the ingredient fragment.
+   */
   public static IngredientFragment createInstance(/* params to pass to fragment*/) {
     IngredientFragment fragment = new IngredientFragment();
     Bundle args = new Bundle();

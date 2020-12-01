@@ -13,6 +13,10 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * This is a joining table in the SmartCheff database between ingredient and recipe.
+ * There is no queries implemented in this class.
+ */
 @Dao
 public interface RecipeIngredientDao {
 

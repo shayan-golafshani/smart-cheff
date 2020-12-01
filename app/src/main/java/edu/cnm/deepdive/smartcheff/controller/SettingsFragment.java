@@ -10,6 +10,9 @@ import androidx.preference.PreferenceFragmentCompat;
 import edu.cnm.deepdive.smartcheff.R;
 
 
+/**
+ * This class is the setting fragment and sets up what is shown in the setting menu.
+ */
 public class SettingsFragment extends PreferenceFragmentCompat {
 
   @Override

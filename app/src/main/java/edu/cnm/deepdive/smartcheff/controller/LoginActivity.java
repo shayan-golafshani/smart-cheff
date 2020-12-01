@@ -9,11 +9,25 @@ import edu.cnm.deepdive.smartcheff.R;
 import edu.cnm.deepdive.smartcheff.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
 
+/**
+ * This class is the login activity and handles the login of a user.
+ */
 public class LoginActivity extends AppCompatActivity {
-    private static final int LOGIN_REQUEST_CODE = 1000;
 
+  /**
+   * This field is a reference creating a login request code.
+   */
+  private static final int LOGIN_REQUEST_CODE = 1000;
+
+  /**
+   * This field is a reference to the GoogleSignInService class.
+   */
     private GoogleSignInService service;
-    private ActivityLoginBinding binding;
+
+  /**
+   * This field is a reference to ActivityLoginBinding.
+   */
+  private ActivityLoginBinding binding;
 
 
     @Override
@@ -40,6 +54,10 @@ public class LoginActivity extends AppCompatActivity {
       super.onActivityResult(requestCode, resultCode, data);
     }
   }
+
+  /**
+   * This method is what prompts the login activity to switch to the main activity.
+   */
   private void switchToMain (){
       Intent intent = new Intent(this, MainActivity.class);
     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

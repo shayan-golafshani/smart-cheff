@@ -14,6 +14,9 @@ import edu.cnm.deepdive.smartcheff.R;
 import edu.cnm.deepdive.smartcheff.databinding.ActivityMainBinding;
 import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
 
+/**
+ * This class is the main activity and handles the loading of all the fragments.
+ */
 public class MainActivity extends AppCompatActivity {
 
   ActivityMainBinding binding;

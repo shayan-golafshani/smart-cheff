@@ -14,15 +14,31 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This class is the view model for the ingredient fragment.
+ */
 public class IngredientViewModel extends AndroidViewModel {
 
-
+  /**
+   * This field is creating a new mutable live data list of RecipeDto.
+   */
   private final MutableLiveData<List<RecipeDto>> recipes;
+
+  /**
+   * This field is creating a new mutable live data Throwable.
+   */
   private final MutableLiveData<Throwable> throwable;
-private final RecipeRepository recipeRepository;
+
+  /**
+   * This field is getting a reference to RecipeRepository
+   */
+  private final RecipeRepository recipeRepository;
 
 
-
+  /**
+   * This is the constructor for the IngredientViewModel class.
+   * @param application is a reference to the application class.
+   */
   public IngredientViewModel(
       @NonNull Application application) {
     super(application);

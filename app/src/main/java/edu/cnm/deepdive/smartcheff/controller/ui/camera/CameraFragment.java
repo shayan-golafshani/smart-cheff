@@ -13,6 +13,9 @@ import edu.cnm.deepdive.smartcheff.databinding.FragmentCameraBinding;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentIngredientBinding;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This class is unimplemented.
+ */
 public class CameraFragment extends Fragment {
 
     FragmentCameraBinding binding;

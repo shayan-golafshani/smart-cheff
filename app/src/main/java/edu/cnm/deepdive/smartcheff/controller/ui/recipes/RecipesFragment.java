@@ -18,17 +18,26 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 
-
+/**
+ * This class holds the logic for the ingredient fragment.
+ */
 public class RecipesFragment extends Fragment {
 
+  /**
+   * This field is creating a new list of RecipeDto that is an array list.
+   */
   List<RecipeDto> recipeItems = new ArrayList<RecipeDto>();
 
-  ArrayAdapter<RecipeDto> adapter;
-
+  /**
+   * This field is a reference to FragmentRecipeBinding
+   */
   FragmentRecipesBinding binding;
 
-  private ListView recipeListView;
 
+  /**
+   * This is the constructor for the RecipeFragment class.
+   * @return the recipe fragment.
+   */
   public static RecipesFragment createInstance(/* params to pass to fragment*/) {
    RecipesFragment fragment = new RecipesFragment();
     Bundle args = new Bundle();
