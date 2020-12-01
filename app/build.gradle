@@ -1,4 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
+
+ext {
+    appName = 'SmarrtCheff'
+}
+
 
 static def getProperty(filename, property) {
     Properties properties = new Properties()
@@ -111,4 +118,34 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+}
+
+android.applicationVariants.all { variant ->
+    task("generate${variant.name.capitalize()}Javadoc", type: Javadoc) {
+        def docTitle = "${appName} ${project.android.defaultConfig.versionName}"
+        def compileTask = variant.javaCompileProvider.get()
+        def androidLibJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
+        title docTitle
+        description "Generates Javadoc for $variant.name."
+        source = compileTask.source
+        destinationDir = file("${projectDir}/../docs/api")
+        doFirst {
+            classpath = files(compileTask.classpath.files) + files(androidLibJar)
+        }
+        options {
+            links 'https://docs.oracle.com/javase/8/docs/api/'
+            links 'http://reactivex.io/RxJava/javadoc/'
+            links 'https://javadoc.io/doc/io.reactivex.rxjava2/rxandroid/latest/'
+            links 'https://javadoc.io/doc/com.google.code.gson/gson/latest/'
+            links 'https://square.github.io/retrofit/2.x/retrofit/'
+            links 'https://square.github.io/okhttp/3.x/okhttp/'
+            links 'https://square.github.io/okhttp/3.x/logging-interceptor/'
+            links 'https://square.github.io/picasso/2.x/picasso/'
+            links 'https://javadoc.io/doc/com.facebook.stetho/stetho/latest/'
+            links 'https://commons.apache.org/proper/commons-csv/apidocs/'
+            linksOffline 'https://developer.android.com/reference', "${projectDir}/../link-offline/android"
+            linksOffline 'https://developers.google.com/android/reference', "${projectDir}/../link-offline/google"
+            windowTitle docTitle
+        }
+    }
 }

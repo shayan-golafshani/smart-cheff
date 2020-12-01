@@ -5,13 +5,17 @@ CREATE TABLE IF NOT EXISTS `Recipe`
 (
     `recipe_id`        INTEGER PRIMARY KEY AUTOINCREMENT,
     `user_id`          INTEGER NOT NULL,
-    `instructions`     TEXT    NOT NULL,
+    `external_key`     INTEGER NOT NULL,
+    `instructions`     TEXT,
     `name`             TEXT    NOT NULL,
+    `image`            TEXT,
     `prep_time`        INTEGER NOT NULL,
     `skill_level`      INTEGER NOT NULL,
     `serving_quantity` INTEGER NOT NULL,
     FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`) ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+CREATE UNIQUE INDEX IF NOT EXISTS `index_Recipe_external_key` ON `Recipe` (`external_key`);
 
 CREATE INDEX IF NOT EXISTS `index_Recipe_user_id` ON `Recipe` (`user_id`);
 
@@ -47,5 +51,4 @@ CREATE TABLE IF NOT EXISTS `RecipeIngredient`
 CREATE INDEX IF NOT EXISTS `index_RecipeIngredient_ingredient_id` ON `RecipeIngredient` (`ingredient_id`);
 
 CREATE INDEX IF NOT EXISTS `index_RecipeIngredient_recipe_id` ON `RecipeIngredient` (`recipe_id`);
-
 ```

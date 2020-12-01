@@ -14,9 +14,9 @@
 
 ## [Technical requirements & dependencies](technical_requirements_dependencies.md)
 
-## [Java Docs]()
+## [Java Docs](../api/allclasses.html)
 
-## [Copyrights & licenses](copyrights.md)
+## [Copyrights & licenses](../notice.md)
 
 ## [Build instructions](build_instructions.md)
 
