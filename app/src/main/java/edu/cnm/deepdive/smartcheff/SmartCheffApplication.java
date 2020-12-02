@@ -7,6 +7,9 @@ import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
 import edu.cnm.deepdive.smartcheff.service.SmartCheffDatabase;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * This class isa the application class for the SmartCheff application.
+ */
 public class SmartCheffApplication extends Application {
 
   @Override

@@ -19,6 +19,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This class holds the logic for the queries to the SmartCheff database involving a recipe.
+ */
 public class RecipeRepository {
 
   private  final SpoonacularServiceProxy serviceProxy;
@@ -26,12 +29,21 @@ public class RecipeRepository {
 
   private final RecipeDao recipeDao;
 
+  /**
+   * This is the constructor for the RecipeRepository.
+   * @param context is reference to a Context object.
+   */
   public RecipeRepository(Context context) {
     this.context = context;
     recipeDao = SmartCheffDatabase.getInstance().getRecipeDao();
     serviceProxy = SpoonacularServiceProxy.getInstance();
   }
 
+  /**
+   * This is the method used to save a recipe to the SmartCheff database.
+   * @param recipe is a reference to a Recipe object.
+   * @return a saved recipe.
+   */
   public Completable save(Recipe recipe) {
     return (recipe.getId() == 0)
         ? recipeDao.insert(recipe)
@@ -41,28 +53,58 @@ public class RecipeRepository {
             .ignoreElement();
   }
 
+  /**
+   * This is the method used to delete a recipe from the SmartCheff database.
+   * @param recipe is a reference to a Recipe object.
+   * @return a deleted recipe.
+   */
   public Completable delete(Recipe recipe) {
     return (recipe.getId() == 0)
         ? Completable.complete()
         : recipeDao.delete(recipe)
             .ignoreElement();
   }
+
+  /**
+   * This method is used to get all the recipes in the SmartCheff database.
+   * @return recipes.
+   */
   public LiveData<List<Recipe>> getAll() {
     return recipeDao.getAll();
-
   }
+
+  /**
+   * This is the method used to find a recipe by name.
+   * @param name is the name of a recipe.
+   * @return a recipe.
+   */
   public LiveData<Recipe> findByName(Recipe name) {
     return recipeDao.findByName(name.getName());
   }
 
+  /**
+   * This method is used to find a recipe the uses specific ingredients.
+   * @param id is the primary key of a recipe.
+   * @return a recipe.
+   */
   public LiveData<List<Recipe>> findRecipeUsingIngredient(Recipe id) {
     return recipeDao.findRecipeUsingIngredient(id.getId());
   }
 
+  /**
+   * This method finds a recipe by id.
+   * @param id is the primary key of a recipe.
+   * @return a recipe.
+   */
   public LiveData<List<Recipe>> findById(Recipe id) {
     return recipeDao.findById(id.getId());
   }
 
+  /**
+   * This method makes a request to the api service using ingredients to find recipes.
+   * @param ingredients is the ingredients inputted by the user.
+   * @return a collection of recipes
+   */
   public Single<List<RecipeDto>> search(Collection<String> ingredients){
 
     return Single.fromCallable(() -> ingredients.stream()
@@ -73,6 +115,11 @@ public class RecipeRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * This method makes a request to the api service using the recipes id to get all the details of the recipe.
+   * @param id is the id of a recipe.
+   * @return details of a recipe.
+   */
   public Single<RecipeDto> retrieve(long id){
 
     return serviceProxy.get(id,BuildConfig.API_KEY)

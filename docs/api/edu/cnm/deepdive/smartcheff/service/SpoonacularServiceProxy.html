@@ -100,6 +100,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">SpoonacularServiceProxy</span></pre>
+<div class="block">This class is the proxy service to Spoonacular api service.</div>
 </li>
 </ul>
 </div>
@@ -120,7 +121,9 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.InstanceHolder.html" title="class in edu.cnm.deepdive.smartcheff.service">SpoonacularServiceProxy.InstanceHolder</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.InstanceHolder.html" title="class in edu.cnm.deepdive.smartcheff.service">SpoonacularServiceProxy.InstanceHolder</a></span></code>
+<div class="block">This class contains the Gson and retofit builders</div>
+</td>
 </tr>
 </table>
 </li>
@@ -140,16 +143,22 @@ var activeTableTab = "activeTableTab";
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html#get-long-java.lang.String-">get</a></span>(long&nbsp;id,
-   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</code>&nbsp;</td>
+   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</code>
+<div class="block">This method gets the details of a single recipe using the id.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html" title="interface in edu.cnm.deepdive.smartcheff.service">SpoonacularServiceProxy</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html#getInstance--">getInstance</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html#getInstance--">getInstance</a></span>()</code>
+<div class="block">This is the getter fot the SpoonacularServiceProxy instance.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html#search-java.lang.String-java.lang.String-">search</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ingredients,
-      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</code>&nbsp;</td>
+      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</code>
+<div class="block">This method is the @Get request to the api service for a collection of recipes.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -177,6 +186,14 @@ var activeTableTab = "activeTableTab";
                                                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ingredients,
                                                                         <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Query.html?is-external=true" title="class or interface in retrofit2.http">@Query</a>(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Query.html?is-external=true#value--" title="class or interface in retrofit2.http">value</a>="apiKey")
                                                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</pre>
+<div class="block">This method is the @Get request to the api service for a collection of recipes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ingredients</code> - is used to find a recipe that include those ingredients.</dd>
+<dd><code>apiKey</code> - is part of required params for a search using the api service.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a collection of recipes.</dd>
+</dl>
 </li>
 </ul>
 <a name="get-long-java.lang.String-">
@@ -190,6 +207,14 @@ var activeTableTab = "activeTableTab";
                                                               long&nbsp;id,
                                                               <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Query.html?is-external=true" title="class or interface in retrofit2.http">@Query</a>(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Query.html?is-external=true#value--" title="class or interface in retrofit2.http">value</a>="apiKey")
                                                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;apiKey)</pre>
+<div class="block">This method gets the details of a single recipe using the id.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - is the id of a specific recipe.</dd>
+<dd><code>apiKey</code> - is part of required params for a search using the api service.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the details of a recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="getInstance--">
@@ -199,6 +224,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getInstance</h4>
 <pre>static&nbsp;<a href="../../../../../edu/cnm/deepdive/smartcheff/service/SpoonacularServiceProxy.html" title="interface in edu.cnm.deepdive.smartcheff.service">SpoonacularServiceProxy</a>&nbsp;getInstance()</pre>
+<div class="block">This is the getter fot the SpoonacularServiceProxy instance.</div>
 </li>
 </ul>
 </li>

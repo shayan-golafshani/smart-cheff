@@ -109,7 +109,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">UserRepository</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">This Repository contains a get get all method. As of now the get all method will not be used
+<div class="block">This class holds the logic for the queries to the SmartCheff database involving a user.
+ This class contains a get get all method. As of now the get all method will not be used
  because there is no need to get all the users.</div>
 </li>
 </ul>
@@ -129,7 +130,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#UserRepository-android.content.Context-">UserRepository</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#UserRepository-android.content.Context-">UserRepository</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">This is the constructor for the UserRepository.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -148,19 +151,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#delete-edu.cnm.deepdive.smartcheff.model.entity.User-">delete</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#delete-edu.cnm.deepdive.smartcheff.model.entity.User-">delete</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>
+<div class="block">This is the method used to delete a user from the SmartCheff database.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#findCurrentUser-edu.cnm.deepdive.smartcheff.model.entity.User-">findCurrentUser</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#findCurrentUser-edu.cnm.deepdive.smartcheff.model.entity.User-">findCurrentUser</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>
+<div class="block">This method is user to find the current user.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#getAll-edu.cnm.deepdive.smartcheff.model.entity.User-">getAll</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#getAll-edu.cnm.deepdive.smartcheff.model.entity.User-">getAll</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>
+<div class="block">This method is user to get all the users in the SmartCheff database.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#save-edu.cnm.deepdive.smartcheff.model.entity.User-">save</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/UserRepository.html#save-edu.cnm.deepdive.smartcheff.model.entity.User-">save</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</code>
+<div class="block">This is the method used to save a user to the SmartCheff database.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -191,6 +202,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>UserRepository</h4>
 <pre>public&nbsp;UserRepository(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">This is the constructor for the UserRepository.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - is reference to a Context object.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -208,6 +224,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>save</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a>&nbsp;save(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</pre>
+<div class="block">This is the method used to save a user to the SmartCheff database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>user</code> - is a reference to a User object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a saved user.</dd>
+</dl>
 </li>
 </ul>
 <a name="delete-edu.cnm.deepdive.smartcheff.model.entity.User-">
@@ -217,6 +240,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>delete</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a>&nbsp;delete(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</pre>
+<div class="block">This is the method used to delete a user from the SmartCheff database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>user</code> - is a reference to a User object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a deleted recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="findCurrentUser-edu.cnm.deepdive.smartcheff.model.entity.User-">
@@ -226,6 +256,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findCurrentUser</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&gt;&nbsp;findCurrentUser(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</pre>
+<div class="block">This method is user to find the current user.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>user</code> - a reference to a User object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the current user.</dd>
+</dl>
 </li>
 </ul>
 <a name="getAll-edu.cnm.deepdive.smartcheff.model.entity.User-">
@@ -235,6 +272,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getAll</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&gt;&nbsp;getAll(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/User.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">User</a>&nbsp;user)</pre>
+<div class="block">This method is user to get all the users in the SmartCheff database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>user</code> - is a reference to a User object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>all the users.</dd>
+</dl>
 </li>
 </ul>
 </li>

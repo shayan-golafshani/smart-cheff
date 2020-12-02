@@ -17,18 +17,39 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+/**
+ * This class is the proxy service to Spoonacular api service.
+ */
 public interface SpoonacularServiceProxy {
 
+  /**
+   * This method is the @Get request to the api service for a collection of recipes.
+   * @param ingredients is used to find a recipe that include those ingredients.
+   * @param apiKey is part of required params for a search using the api service.
+   * @return a collection of recipes.
+   */
   @GET("recipes/findByIngredients")
   Single<List<RecipeDto>> search(@Query("ingredients") String ingredients, @Query("apiKey") String apiKey);
 
+  /**
+   * This method gets the details of a single recipe using the id.
+   * @param id is the id of a specific recipe.
+   * @param apiKey is part of required params for a search using the api service.
+   * @return the details of a recipe.
+   */
   @GET("recipes/{id}/information")
   Single<RecipeDto> get(@Path("id") long id, @Query("apiKey") String apiKey);
 
+  /**
+   * This is the getter fot the SpoonacularServiceProxy instance.
+   */
   static SpoonacularServiceProxy getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * This class contains the Gson and retofit builders
+   */
   class InstanceHolder {
 
     private static final SpoonacularServiceProxy INSTANCE;

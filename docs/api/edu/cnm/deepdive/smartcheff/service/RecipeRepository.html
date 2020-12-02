@@ -109,6 +109,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">RecipeRepository</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">This class holds the logic for the queries to the SmartCheff database involving a recipe.</div>
 </li>
 </ul>
 </div>
@@ -127,7 +128,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#RecipeRepository-android.content.Context-">RecipeRepository</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#RecipeRepository-android.content.Context-">RecipeRepository</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">This is the constructor for the RecipeRepository.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -146,35 +149,51 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#delete-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">delete</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#delete-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">delete</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</code>
+<div class="block">This is the method used to delete a recipe from the SmartCheff database.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findById-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findById</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findById-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findById</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</code>
+<div class="block">This method finds a recipe by id.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findByName-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findByName</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findByName-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findByName</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;name)</code>
+<div class="block">This is the method used to find a recipe by name.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findRecipeUsingIngredient-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findRecipeUsingIngredient</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#findRecipeUsingIngredient-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">findRecipeUsingIngredient</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</code>
+<div class="block">This method is used to find a recipe the uses specific ingredients.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#getAll--">getAll</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#getAll--">getAll</a></span>()</code>
+<div class="block">This method is used to get all the recipes in the SmartCheff database.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#retrieve-long-">retrieve</a></span>(long&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#retrieve-long-">retrieve</a></span>(long&nbsp;id)</code>
+<div class="block">This method makes a request to the api service using the recipes id to get all the details of the recipe.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#save-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">save</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#save-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">save</a></span>(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</code>
+<div class="block">This is the method used to save a recipe to the SmartCheff database.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#search-java.util.Collection-">search</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;ingredients)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/service/RecipeRepository.html#search-java.util.Collection-">search</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;ingredients)</code>
+<div class="block">This method makes a request to the api service using ingredients to find recipes.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -205,6 +224,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>RecipeRepository</h4>
 <pre>public&nbsp;RecipeRepository(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">This is the constructor for the RecipeRepository.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - is reference to a Context object.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -222,6 +246,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>save</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a>&nbsp;save(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</pre>
+<div class="block">This is the method used to save a recipe to the SmartCheff database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>recipe</code> - is a reference to a Recipe object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a saved recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="delete-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">
@@ -231,6 +262,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>delete</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Completable.html?is-external=true" title="class or interface in io.reactivex">Completable</a>&nbsp;delete(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;recipe)</pre>
+<div class="block">This is the method used to delete a recipe from the SmartCheff database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>recipe</code> - is a reference to a Recipe object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a deleted recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="getAll--">
@@ -240,6 +278,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getAll</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;&nbsp;getAll()</pre>
+<div class="block">This method is used to get all the recipes in the SmartCheff database.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>recipes.</dd>
+</dl>
 </li>
 </ul>
 <a name="findByName-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">
@@ -249,6 +292,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findByName</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&nbsp;findByName(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;name)</pre>
+<div class="block">This is the method used to find a recipe by name.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - is the name of a recipe.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="findRecipeUsingIngredient-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">
@@ -258,6 +308,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findRecipeUsingIngredient</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;&nbsp;findRecipeUsingIngredient(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</pre>
+<div class="block">This method is used to find a recipe the uses specific ingredients.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - is the primary key of a recipe.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="findById-edu.cnm.deepdive.smartcheff.model.entity.Recipe-">
@@ -267,6 +324,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findById</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&gt;&gt;&nbsp;findById(<a href="../../../../../edu/cnm/deepdive/smartcheff/model/entity/Recipe.html" title="class in edu.cnm.deepdive.smartcheff.model.entity">Recipe</a>&nbsp;id)</pre>
+<div class="block">This method finds a recipe by id.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - is the primary key of a recipe.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a recipe.</dd>
+</dl>
 </li>
 </ul>
 <a name="search-java.util.Collection-">
@@ -276,6 +340,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>search</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&gt;&nbsp;search(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;ingredients)</pre>
+<div class="block">This method makes a request to the api service using ingredients to find recipes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ingredients</code> - is the ingredients inputted by the user.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a collection of recipes</dd>
+</dl>
 </li>
 </ul>
 <a name="retrieve-long-">
@@ -285,6 +356,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>retrieve</h4>
 <pre>public&nbsp;<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex">Single</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&nbsp;retrieve(long&nbsp;id)</pre>
+<div class="block">This method makes a request to the api service using the recipes id to get all the details of the recipe.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - is the id of a recipe.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>details of a recipe.</dd>
+</dl>
 </li>
 </ul>
 </li>

@@ -14,7 +14,9 @@ import edu.cnm.deepdive.smartcheff.model.entity.Recipe;
 import edu.cnm.deepdive.smartcheff.model.entity.RecipeIngredient;
 import edu.cnm.deepdive.smartcheff.model.entity.User;
 
-
+/**
+ * This class is what creates the Smartcheff database.
+ */
 @Database(entities = {Recipe.class, Ingredient.class, User.class, RecipeIngredient.class}, version = 1, exportSchema = true)
 
 public abstract class SmartCheffDatabase extends RoomDatabase {

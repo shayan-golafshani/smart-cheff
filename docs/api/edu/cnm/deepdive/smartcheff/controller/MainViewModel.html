@@ -124,6 +124,7 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">MainViewModel</span>
 extends <a href="https://developer.android.com/reference/androidx/lifecycle/AndroidViewModel.html?is-external=true" title="class or interface in androidx.lifecycle">AndroidViewModel</a>
 implements <a href="https://developer.android.com/reference/androidx/lifecycle/LifecycleObserver.html?is-external=true" title="class or interface in androidx.lifecycle">LifecycleObserver</a></pre>
+<div class="block">This class is the is the Main view model for all the fragments.</div>
 </li>
 </ul>
 </div>
@@ -142,7 +143,9 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#MainViewModel-android.app.Application-">MainViewModel</a></span>(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app">Application</a>&nbsp;application)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#MainViewModel-android.app.Application-">MainViewModel</a></span>(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app">Application</a>&nbsp;application)</code>
+<div class="block">This is the constructor for the Main View Model.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -161,15 +164,21 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#getSearchResults--">getSearchResults</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#getSearchResults--">getSearchResults</a></span>()</code>
+<div class="block">This is the getter for the live data list of RecipeDto</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#getThrowable--">getThrowable</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#getThrowable--">getThrowable</a></span>()</code>
+<div class="block">This is the getter for the live data Throwable</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#search-java.lang.String:A-">search</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;ingredients)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/cnm/deepdive/smartcheff/controller/MainViewModel.html#search-java.lang.String:A-">search</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;ingredients)</code>
+<div class="block">This method searches Spoonaculer using the string array of ingredients.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -215,6 +224,11 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <h4>MainViewModel</h4>
 <pre>public&nbsp;MainViewModel(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation">@NonNull</a>
                      <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app">Application</a>&nbsp;application)</pre>
+<div class="block">This is the constructor for the Main View Model.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>application</code> - is a reference to the Application class.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -232,6 +246,7 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <li class="blockList">
 <h4>getSearchResults</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../edu/cnm/deepdive/smartcheff/model/dto/RecipeDto.html" title="class in edu.cnm.deepdive.smartcheff.model.dto">RecipeDto</a>&gt;&gt;&nbsp;getSearchResults()</pre>
+<div class="block">This is the getter for the live data list of RecipeDto</div>
 </li>
 </ul>
 <a name="getThrowable--">
@@ -241,6 +256,10 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <li class="blockList">
 <h4>getThrowable</h4>
 <pre>public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle">LiveData</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&nbsp;getThrowable()</pre>
+<div class="block">This is the getter for the live data Throwable</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a name="search-java.lang.String:A-">
@@ -250,6 +269,11 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <li class="blockList">
 <h4>search</h4>
 <pre>public&nbsp;void&nbsp;search(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;ingredients)</pre>
+<div class="block">This method searches Spoonaculer using the string array of ingredients.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ingredients</code> - is a String array inputted by the user.</dd>
+</dl>
 </li>
 </ul>
 </li>
