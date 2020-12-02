@@ -11,7 +11,7 @@ Picture being a student with the classic ingredient Top Ramen. When Top Ramen is
 
 ## Credits
 
--SmartCheff_ was written by Alex Garber.
+-SmartCheff_ was written by Alex Garber with contributions by Nicholas Bennett and Todd Nordquist.
 
 &copy; 2020 Alex Garber. All rights reserved.
 

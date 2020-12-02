@@ -34,4 +34,4 @@
     
     * [Spoonacular Api](https://spoonacular.com/food-api/docs)
 
-## [Cloud- or device-based services:](../work/cdservices.md)
+## [Future cloud- or device-based services:](../work/cdservices.md)
