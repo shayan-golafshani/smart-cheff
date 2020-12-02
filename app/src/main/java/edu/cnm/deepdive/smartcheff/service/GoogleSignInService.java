@@ -12,7 +12,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
-
+/**
+ * This class holds all the logic for the google sign in function.
+ */
 public class GoogleSignInService {
 
   private static Application context;
@@ -31,6 +33,10 @@ public class GoogleSignInService {
     client = GoogleSignIn.getClient(context, options);
   }
 
+  /**
+   * This is the
+   * @param context
+   */
   public static void setContext(Application context) {
     GoogleSignInService.context = context;
   }

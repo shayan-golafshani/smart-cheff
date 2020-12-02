@@ -20,7 +20,7 @@ import edu.cnm.deepdive.smartcheff.service.GoogleSignInService;
  */
 public class MainActivity extends AppCompatActivity {
 
-  ActivityMainBinding binding;
+ private ActivityMainBinding binding;
 
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
     return true;
   }
 
-
+  /**
+   * This method is the logic behind the logout function.
+   */
   private void logout() {
     GoogleSignInService.getInstance().signOut()
         .addOnCompleteListener((ignored) -> {

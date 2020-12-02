@@ -14,12 +14,26 @@ import edu.cnm.deepdive.smartcheff.model.dto.RecipeDto;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This class is the adapter for the list view in the recipe fragment.
+ */
 public class RecipeAdapter extends ArrayAdapter<RecipeDto> {
 
+  /**
+   * This field is a reference to the layout inflater.
+   */
   private final LayoutInflater inflater;
+
+  /**
+   * This field is a list of RecipeDto.
+   */
   private final List<RecipeDto> recipes;
 
+  /**
+   * This is the constructor for the RecipeAdapter.
+   * @param context is the recipe adapter context.
+   * @param recipes is the list of RecipeDto
+   */
   public RecipeAdapter(Context context, List<RecipeDto> recipes){
     super(context, R.layout.item_recipe, recipes);
     inflater = LayoutInflater.from(context);

@@ -15,6 +15,9 @@ import java.util.Arrays;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This class is the is the Main view model for all the fragments.
+ */
 public class MainViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final MutableLiveData<List<RecipeDto>> searchResults;
@@ -22,6 +25,10 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
   private final RecipeRepository recipeRepository;
   private final CompositeDisposable pending;
 
+  /**
+   * This is the constructor for the Main View Model.
+   * @param application is a reference to the Application class.
+   */
   public MainViewModel(
       @NonNull Application application) {
     super(application);
@@ -31,14 +38,25 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     pending = new CompositeDisposable();
   }
 
+  /**
+   * This is the getter for the live data list of RecipeDto
+   */
   public LiveData<List<RecipeDto>> getSearchResults() {
     return searchResults;
   }
 
+  /**
+   * This is the getter for the live data Throwable
+   * @return
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
+  /**
+   * This method searches Spoonaculer using the string array of ingredients.
+   * @param ingredients is a String array inputted by the user.
+   */
   public void search(String[] ingredients){
     pending.add(
         recipeRepository.search(Arrays.asList(ingredients))
@@ -49,6 +67,9 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     );
   }
 
+  /**
+   * This method clears the the Composite Disposable pending.
+   */
   @OnLifecycleEvent(Event.ON_STOP)
   private void clearPending(){
     pending.clear();
