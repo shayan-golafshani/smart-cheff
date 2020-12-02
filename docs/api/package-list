@@ -1,0 +1,12 @@
+edu.cnm.deepdive.smartcheff
+edu.cnm.deepdive.smartcheff.adapter
+edu.cnm.deepdive.smartcheff.controller
+edu.cnm.deepdive.smartcheff.controller.ui.camera
+edu.cnm.deepdive.smartcheff.controller.ui.ingredientinput
+edu.cnm.deepdive.smartcheff.controller.ui.recipes
+edu.cnm.deepdive.smartcheff.controller.ui.saved
+edu.cnm.deepdive.smartcheff.databinding
+edu.cnm.deepdive.smartcheff.model.dao
+edu.cnm.deepdive.smartcheff.model.dto
+edu.cnm.deepdive.smartcheff.model.entity
+edu.cnm.deepdive.smartcheff.service

@@ -6,28 +6,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import com.squareup.picasso.Picasso;
 import edu.cnm.deepdive.smartcheff.R;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentRecipesBinding;
+import edu.cnm.deepdive.smartcheff.databinding.ItemRecipeBinding;
 import edu.cnm.deepdive.smartcheff.model.dto.RecipeDto;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class RecipeAdapter extends ArrayAdapter<RecipeDto> {
 
   private final LayoutInflater inflater;
+  private final List<RecipeDto> recipes;
 
-  public RecipeAdapter(Context context){
-    super(context, R.layout.item_recipe, new ArrayList<RecipeDto>());
+  public RecipeAdapter(Context context, List<RecipeDto> recipes){
+    super(context, R.layout.item_recipe, recipes);
     inflater = LayoutInflater.from(context);
+    this.recipes = recipes;
+
   }
 
 
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
-     FragmentRecipesBinding binding = (convertView != null)
-        ? FragmentRecipesBinding.bind(convertView)
-        : FragmentRecipesBinding.inflate(inflater);
-
+     ItemRecipeBinding binding = (convertView != null)
+        ? ItemRecipeBinding.bind(convertView)
+        : ItemRecipeBinding.inflate(inflater);
+    RecipeDto recipe = getItem(position);
+    binding.name.setText(recipe.getTitle());
+    Picasso.get().load(recipe.getImage()).into(binding.image);
     return binding.getRoot();
   }
 }

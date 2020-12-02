@@ -9,13 +9,31 @@
     android:id="@+id/navigation_ingredient"
     android:label="@string/title_ingredient"
     android:name="edu.cnm.deepdive.smartcheff.controller.ui.ingredientinput.IngredientFragment"
-    tools:layout="@layout/fragment_ingredient"/>
+    tools:layout="@layout/fragment_ingredient">
+
+    <action
+      android:id="@+id/search_recipes"
+      app:destination="@id/navigation_recipes">
+
+      <argument
+        android:name="ingredients_list"
+        app:argType="string[]"/>
+    </action>
+  </fragment>
 
   <fragment
     android:id="@+id/navigation_recipes"
     android:label="@string/title_recipes"
     android:name="edu.cnm.deepdive.smartcheff.controller.ui.recipes.RecipesFragment"
-    tools:layout="@layout/fragment_recipes"/>
+    tools:layout="@layout/fragment_recipes">
+
+    <argument
+      android:name="ingredients_list"
+      app:argType="string[]"
+      app:nullable="true"
+      android:defaultValue="@null"/>
+
+  </fragment>
 
 <!--  <fragment-->
 <!--    android:id="@+id/navigation_saved"-->

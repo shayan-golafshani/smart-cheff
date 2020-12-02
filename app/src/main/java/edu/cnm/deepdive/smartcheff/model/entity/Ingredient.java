@@ -7,7 +7,9 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import io.reactivex.annotations.Nullable;
 
-
+/**
+ * This
+ */
 @SuppressWarnings("NotNullFieldNotInitialized")
 @Entity(
     foreignKeys = {
