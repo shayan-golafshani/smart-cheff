@@ -1,7 +1,5 @@
 # Documentation:
 
-## [Project introduction & description](../work/project_introduction_and_description.md)
-
 ## [Intended users](../work/intendedusers.md)
 
 ## [Summary of current state](../work/summary.md)
