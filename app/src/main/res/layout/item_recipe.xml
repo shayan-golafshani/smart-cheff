@@ -13,7 +13,8 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="@+id/image"
     app:layout_constraintTop_toTopOf="parent"
-    tools:text="Recipe Name"/>
+    tools:text="Recipe Name"
+    android:textColor="@color/textBackground"/>
 
   <ImageView
     android:id="@+id/image"
@@ -24,4 +25,6 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

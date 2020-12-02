@@ -18,6 +18,7 @@ import edu.cnm.deepdive.smartcheff.adapter.RecipeAdapter;
 import edu.cnm.deepdive.smartcheff.controller.MainViewModel;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentRecipesBinding;
 import edu.cnm.deepdive.smartcheff.model.dto.RecipeDto;
+import edu.cnm.deepdive.smartcheff.service.RecipeRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
@@ -33,7 +34,7 @@ public class RecipesFragment extends Fragment {
    */
   private FragmentRecipesBinding binding;
   private MainViewModel viewModel;
-
+  private RecipeRepository recipeRepository;
 
   @Nullable
   @Override
@@ -48,7 +49,8 @@ public class RecipesFragment extends Fragment {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RecipeDto recipe = (RecipeDto) parent.getItemAtPosition(position);
-        //TODO Get Recipe Details
+        // TODO get recipe details
+
       }
     });
     return binding.getRoot();

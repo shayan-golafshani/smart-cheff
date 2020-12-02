@@ -35,6 +35,13 @@
 
   </fragment>
 
+<!--<fragment-->
+<!--  android:id="@+id/navigation_settings"-->
+<!--  android:label="@string/settings_title"-->
+<!--  android:name="edu.cnm.deepdive.smartcheff.controller.SettingsFragment"-->
+<!--  tools:layout="@xml/preferences"/>-->
+
+
 <!--  <fragment-->
 <!--    android:id="@+id/navigation_saved"-->
 <!--    android:label="@string/title_saved"-->

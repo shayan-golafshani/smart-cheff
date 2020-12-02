@@ -2,6 +2,7 @@ package edu.cnm.deepdive.smartcheff.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
     return handled;
   }
 
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    // Inflate the menu; this adds items to the action bar if it is present.
+    getMenuInflater().inflate(R.menu.navigation, menu);
+    return true;
+  }
 
   @Override
   public boolean onSupportNavigateUp() {
@@ -70,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     NavigationUI.setupWithNavController(navView, navController);
   }
+
 
 
 }

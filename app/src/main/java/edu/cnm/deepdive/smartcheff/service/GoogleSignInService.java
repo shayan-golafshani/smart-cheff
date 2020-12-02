@@ -26,7 +26,7 @@ public class GoogleSignInService {
         .requestEmail()
         .requestId()
         .requestProfile()
-       // .requestIdToken(BuildConfig.CLIENT_ID)
+//        .requestIdToken(BuildConfig.CLIENT_ID)
         .build();
     client = GoogleSignIn.getClient(context, options);
   }
@@ -72,10 +72,10 @@ public class GoogleSignInService {
 
   private void setAccount(GoogleSignInAccount account) {
     this.account = account;
-    if (account != null) {
+//    if (account != null) {
       //noinspection ConstantConditions
      // Log.d(getClass().getSimpleName(), account.getIdToken());
-    }
+//    }
   }
 
   private static class InstanceHolder {

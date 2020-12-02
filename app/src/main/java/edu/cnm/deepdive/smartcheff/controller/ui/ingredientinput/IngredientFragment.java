@@ -15,6 +15,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewbinding.ViewBinding;
 import edu.cnm.deepdive.smartcheff.R;
+import edu.cnm.deepdive.smartcheff.controller.MainViewModel;
 import edu.cnm.deepdive.smartcheff.controller.ui.recipes.RecipesFragment;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentIngredientBinding;
 import java.util.function.Predicate;
@@ -36,7 +37,7 @@ public class IngredientFragment extends Fragment {
   /**
    * This field is a reference to the Ingredient view model.
    */
-  private IngredientViewModel viewModel;
+  private MainViewModel viewModel;
 
 
   @Nullable
@@ -67,7 +68,7 @@ public class IngredientFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     // Get reference to view model and set observers on live data.
-    viewModel = new ViewModelProvider(this).get(IngredientViewModel.class);
+    viewModel = new ViewModelProvider(this).get(MainViewModel.class);
     // TODO obserive live data as nedded
   }
 

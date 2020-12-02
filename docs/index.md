@@ -21,7 +21,7 @@ The intended functional elements in this project include recipe lookup by ingred
 
 -SmartCheff_ was written by Alex Garber with contributions by Nicholas Bennett and Todd Nordquist.
 
-&copy; 2020 Alex Garber. All rights reserved.
+&copy; 2020 Alex Garber. 
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

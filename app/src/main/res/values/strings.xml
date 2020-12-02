@@ -13,4 +13,8 @@
   <string name="menu_title_saved">Saved</string>
   <string name="menu_title_camera">Camera</string>
   <string name="title_camera">Camera</string>
+  <string name="input_instructions">Hello! Please input your ingredients below separated by a comma.</string>
+  <string name="recipe_button_text">Find me Recipes</string>
+  <string name="settings_title">Settings</string>
+  <string name="sign_out_title">Sign out</string>
 </resources>
