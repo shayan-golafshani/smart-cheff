@@ -10,13 +10,13 @@
   <ListView
     android:id="@+id/recipe_list"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
+    android:layout_height="@dimen/zero_dp"
     android:background="@color/colorPrimary"
     android:padding="@dimen/half_margin"
-    android:divider="#070707"
-    android:dividerHeight="1dp"
+    android:divider="@color/divider"
+    android:dividerHeight="@dimen/divider_height"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
-    android:listSelector="#0f0"/>
+    android:listSelector="@color/list_selector"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@
 
     <ImageView
       android:id="@+id/image"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       android:scaleType="centerInside"
       android:adjustViewBounds="true"
@@ -25,7 +25,7 @@
 
     <TextView
       android:id="@+id/title"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/half_margin"
       android:textAlignment="center"
@@ -33,18 +33,18 @@
       app:layout_constraintTop_toBottomOf="@id/image"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      tools:text="Boild Eggs"/>
+      tools:text="Fried Eggs"/>
 
     <TextView
       android:id="@+id/summary"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       style="@style/TextAppearance.AppCompat.Medium"
       android:layout_margin="@dimen/half_margin"
       app:layout_constraintTop_toBottomOf="@id/title"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      tools:text="write some text"/>
+      tools:text="Write some text"/>
 
     <TextView
       android:id="@+id/prep_time_label"
@@ -54,7 +54,7 @@
       style="@style/TextAppearance.AppCompat.Medium"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/summary"
-      android:text="Prep:"/>
+      android:text="@string/prep_time_text"/>
 
     <TextView
       android:id="@+id/prep_time"
@@ -74,7 +74,7 @@
       style="@style/TextAppearance.AppCompat.Medium"
       app:layout_constraintEnd_toStartOf="@id/servings"
       app:layout_constraintTop_toBottomOf="@id/summary"
-      android:text="Servings:"/>
+      android:text="@string/servings_text"/>
 
     <TextView
       android:id="@+id/servings"
@@ -87,7 +87,7 @@
       tools:text="10"/>
     <TextView
       android:id="@+id/ingredients"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       app:layout_constraintTop_toBottomOf="@id/servings"
       app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
 
     <TextView
       android:id="@+id/instructions"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       app:layout_constraintTop_toBottomOf="@id/ingredients"
       app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
 
     <TextView
       android:id="@+id/source_url"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/zero_dp"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/half_margin"
       app:layout_constraintStart_toStartOf="parent"

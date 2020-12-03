@@ -35,8 +35,8 @@
 
   <TextView
     android:id="@+id/input_ingredient_instructions"
-    android:layout_width="200dp"
-    android:layout_height="50dp"
+    android:layout_width="@dimen/input_instructions_width"
+    android:layout_height="@dimen/input_instructions_height"
     android:text="@string/input_instructions"
     app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
     app:layout_constraintTop_toTopOf="parent"
@@ -71,9 +71,9 @@
 
     <com.google.android.material.textfield.TextInputEditText
       android:id="@+id/ingredient_list"
-      android:layout_width="150dp"
+      android:layout_width="@dimen/ingredient_list_width"
       android:layout_height="wrap_content"
-      android:hint="Input Ingredients "
+      android:hint="@string/ingredient_list_hint"
       android:inputType="textCapCharacters|textMultiLine|text"
       tools:text="Eggs,Flour"/>
 

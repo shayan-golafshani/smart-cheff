@@ -5,4 +5,6 @@
   <color name="colorAccent">#011312</color>
   <color name="textBackground">#ffff</color>
   <color name="searchButton">#33A819</color>
+  <color name="divider">#070707</color>
+  <color name="list_selector">#0f0</color>
 </resources>

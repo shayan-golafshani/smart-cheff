@@ -18,4 +18,8 @@
   <string name="settings_title">Settings</string>
   <string name="sign_out_title">Sign out</string>
   <string name="current_recipe_title">Current Recipe</string>
+  <string name="camera_text">CAMERA</string>
+  <string name="prep_time_text">Prep:</string>
+  <string name="servings_text">Servings:</string>
+  <string name="ingredient_list_hint">Input Ingredients</string>
 </resources>
