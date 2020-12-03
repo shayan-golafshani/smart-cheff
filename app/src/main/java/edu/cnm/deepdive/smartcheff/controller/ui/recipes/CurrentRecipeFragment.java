@@ -2,7 +2,6 @@ package edu.cnm.deepdive.smartcheff.controller.ui.recipes;
 
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +10,24 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.squareup.picasso.Picasso;
+import edu.cnm.deepdive.smartcheff.adapter.CurrentRecipeAdapter;
 import edu.cnm.deepdive.smartcheff.controller.MainViewModel;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentCurrentRecipeBinding;
+import edu.cnm.deepdive.smartcheff.model.dto.AnalyzedInstructionDto;
+import edu.cnm.deepdive.smartcheff.model.dto.ExtendedIngredientDto;
 import org.jetbrains.annotations.NotNull;
 /**
  * This class holds the logic for the CurrentRecipe fragment.
  */
 public class CurrentRecipeFragment extends Fragment {
 
+  private ExtendedIngredientDto ingredients;
+  private CurrentRecipeAdapter adapter;
   private FragmentCurrentRecipeBinding binding;
   private MainViewModel viewModel;
+
+
+
 
   @Nullable
   @Override
@@ -52,6 +59,7 @@ public class CurrentRecipeFragment extends Fragment {
       }
       binding.sourceUrl.setText(recipe.getSourceUrl());
       binding.instructions.setText(recipe.getInstructions());
+//      binding.instructions.setAdapter(adapter);
 
     });
     long id = CurrentRecipeFragmentArgs.fromBundle(getArguments()).getExternalId();

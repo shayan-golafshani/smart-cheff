@@ -5,10 +5,11 @@ Bellow is the current implemented and unimplemented elements for a "finished pro
 
 ### Implemented function
 * Use of the api service [Spoonacular](https://spoonacular.com/food-api/docs) to make a search useing inputed ingredients.
-
+* Display of recipe summary, image, instructions, prep time and serving size.
 
 
 ### Unimplemented functions
+* The display of the Extended ingredients.
 * Using the devices' camera to scan barcode of a product.
 * Using the Aip service [Barcode moster](https://rapidapi.com/jonata/api/barcode-monster/endpoints) to receive information about a product for use in a search for recipes. 
 * The functionality to save the recipes to the device.
@@ -17,6 +18,7 @@ Bellow is the current implemented and unimplemented elements for a "finished pro
 
 ### Unimplemented cosmetic enhancements.
 
+* The display if instructions using a listview.
 * Finished color scheme
 * Original background images for all fragment screens.
 

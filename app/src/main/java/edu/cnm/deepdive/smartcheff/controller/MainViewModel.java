@@ -73,6 +73,10 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     );
   }
 
+  /**
+   * This method is user to get the recipe details.
+   * @param id id the recipe id.
+   */
   public void getDetails(long id){
     pending.add(
         recipeRepository.retrieve(id)
