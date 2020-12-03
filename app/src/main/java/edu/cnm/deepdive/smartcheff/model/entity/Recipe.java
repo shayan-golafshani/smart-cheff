@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
 import io.reactivex.annotations.Nullable;
 
 /**
- * This is an entity class that makes a table in the SmartCheff data base.
+ * This is an @Entity class that makes a table in the SmartCheff data base.
  */
 @SuppressWarnings("NotNullFieldNotInitialized")
 @Entity(

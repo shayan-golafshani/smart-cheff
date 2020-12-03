@@ -48,7 +48,7 @@ public interface SpoonacularServiceProxy {
   }
 
   /**
-   * This class contains the Gson and retofit builders
+   * This nested class contains the Gson and retofit builders.
    */
   class InstanceHolder {
 
