@@ -29,9 +29,6 @@ import org.jetbrains.annotations.NotNull;
  */
 public class RecipesFragment extends Fragment {
 
-  /**
-   * This field is a reference to FragmentRecipeBinding
-   */
   private FragmentRecipesBinding binding;
   private MainViewModel viewModel;
   private RecipeRepository recipeRepository;
@@ -49,6 +46,7 @@ public class RecipesFragment extends Fragment {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RecipeDto recipe = (RecipeDto) parent.getItemAtPosition(position);
+
         // TODO get recipe details
 
       }
@@ -74,11 +72,6 @@ public class RecipesFragment extends Fragment {
     }
   }
 
-
-
-//  public enum Variation {
-//    AVAILABLE, CURRENT, CLOSED;
-//  }
 
 
 }

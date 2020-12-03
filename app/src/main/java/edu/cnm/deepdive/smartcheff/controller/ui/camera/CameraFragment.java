@@ -17,38 +17,38 @@ import org.jetbrains.annotations.NotNull;
  * This class is unimplemented.
  */
 public class CameraFragment extends Fragment {
-
-    FragmentCameraBinding binding;
-
-  @Override
-  public void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    Bundle args = getArguments();
-    //Do whatever is necessary with args
-  }
-
-
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-        @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      binding = edu.cnm.deepdive.smartcheff.databinding.FragmentCameraBinding.inflate(inflater);
-      //noinspection ConstantConditions
-
-      // THe stuff down bellow allows us to display multiple variations of a fragment.
-//    Variation variation = MatchFragmentArgs.fromBundle(getArguments()).getVariation();
-//    binding.placeholder.setText(variation.toString());
-      // Access references in binding to set contents of view objects, as appropriate.
-      return binding.getRoot();
-    }
-
-    @Override
-    public void onViewCreated(@NonNull @NotNull View view,
-        @Nullable Bundle savedInstanceState) {
-      super.onViewCreated(view, savedInstanceState);
-      // Get reference to view model and set observers on live data.
-    }
+//
+//    FragmentCameraBinding binding;
+//
+//  @Override
+//  public void onCreate(@Nullable Bundle savedInstanceState) {
+//    super.onCreate(savedInstanceState);
+//    Bundle args = getArguments();
+//    //Do whatever is necessary with args
+//  }
+//
+//
+//
+//    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater,
+//        @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//      binding = edu.cnm.deepdive.smartcheff.databinding.FragmentCameraBinding.inflate(inflater);
+//      //noinspection ConstantConditions
+//
+//      // THe stuff down bellow allows us to display multiple variations of a fragment.
+////    Variation variation = MatchFragmentArgs.fromBundle(getArguments()).getVariation();
+////    binding.placeholder.setText(variation.toString());
+//      // Access references in binding to set contents of view objects, as appropriate.
+//      return binding.getRoot();
+//    }
+//
+//    @Override
+//    public void onViewCreated(@NonNull @NotNull View view,
+//        @Nullable Bundle savedInstanceState) {
+//      super.onViewCreated(view, savedInstanceState);
+//      // Get reference to view model and set observers on live data.
+//    }
 
 
 //  public enum Variation {

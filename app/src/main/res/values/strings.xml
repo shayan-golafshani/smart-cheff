@@ -17,4 +17,5 @@
   <string name="recipe_button_text">Find me Recipes</string>
   <string name="settings_title">Settings</string>
   <string name="sign_out_title">Sign out</string>
+  <string name="current_recipe_title">Current Recipe</string>
 </resources>

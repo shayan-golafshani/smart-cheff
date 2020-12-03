@@ -12,6 +12,7 @@ Bellow is the current implemented and unimplemented elements for a "finished pro
 * Using the devices' camera to scan barcode of a product.
 * Using the Aip service [Barcode moster](https://rapidapi.com/jonata/api/barcode-monster/endpoints) to receive information about a product for use in a search for recipes. 
 * The functionality to save the recipes to the device.
+* The settings fragment, and the ability to change how many recipes that are provided.
 
 
 ### Unimplemented cosmetic enhancements.

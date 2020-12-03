@@ -12,7 +12,12 @@
     android:icon="@drawable/ic_recipes"
     android:title="@string/menu_title_recipes"/>
 
-<!--  <item-->
+  <item
+    android:id="@+id/navigation_current_recipe"
+    android:icon="@drawable/ic_current_recipe"
+    android:title="@string/current_recipe_title"/>
+
+  <!--  <item-->
 <!--    android:id="@+id/settings"-->
 <!--    android:icon="@drawable/ic_settings"-->
 <!--    android:title="@string/settings_title"/>-->

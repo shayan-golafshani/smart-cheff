@@ -35,6 +35,12 @@
 
   </fragment>
 
+  <fragment
+    android:id="@+id/navigation_current_recipe"
+    android:label="Current Recipe"
+    android:name="edu.cnm.deepdive.smartcheff.controller.ui.recipes.CurrentRecipeFragment"
+    tools:layout="@layout/fragment_current_recipe"/>
+
 <!--<fragment-->
 <!--  android:id="@+id/navigation_settings"-->
 <!--  android:label="@string/settings_title"-->
