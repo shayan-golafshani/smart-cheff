@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 public class MainViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final MutableLiveData<List<RecipeDto>> searchResults;
+  private final MutableLiveData<RecipeDto> searchDetail;
   private final MutableLiveData<Throwable> throwable;
   private final RecipeRepository recipeRepository;
   private final CompositeDisposable pending;
@@ -36,6 +37,7 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     throwable = new MutableLiveData<>();
     recipeRepository = new RecipeRepository(application);
     pending = new CompositeDisposable();
+    searchDetail = new MutableLiveData<>();
   }
 
   /**
@@ -53,6 +55,10 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     return throwable;
   }
 
+  public LiveData<RecipeDto> getSearchDetail() {
+    return searchDetail;
+  }
+
   /**
    * This method searches Spoonaculer using the string array of ingredients.
    * @param ingredients is a String array inputted by the user.
@@ -62,6 +68,16 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
         recipeRepository.search(Arrays.asList(ingredients))
             .subscribe(
                 searchResults::postValue,
+                throwable::postValue
+            )
+    );
+  }
+
+  public void getDetails(long id){
+    pending.add(
+        recipeRepository.retrieve(id)
+            .subscribe(
+                searchDetail::postValue,
                 throwable::postValue
             )
     );

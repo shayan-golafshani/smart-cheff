@@ -33,13 +33,32 @@
       app:nullable="true"
       android:defaultValue="@null"/>
 
+    <action
+      android:id="@+id/show_details"
+      app:destination="@id/navigation_current_recipe">
+
+      <argument
+        android:name="external_id"
+        app:argType="long"/>
+
+
+
+    </action>
+
   </fragment>
 
   <fragment
     android:id="@+id/navigation_current_recipe"
     android:label="Current Recipe"
     android:name="edu.cnm.deepdive.smartcheff.controller.ui.recipes.CurrentRecipeFragment"
-    tools:layout="@layout/fragment_current_recipe"/>
+    tools:layout="@layout/fragment_current_recipe">
+
+    <argument
+      android:name="external_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+
+  </fragment>
 
 <!--<fragment-->
 <!--  android:id="@+id/navigation_settings"-->

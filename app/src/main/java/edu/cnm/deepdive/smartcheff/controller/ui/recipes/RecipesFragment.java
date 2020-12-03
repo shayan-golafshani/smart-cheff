@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import edu.cnm.deepdive.smartcheff.adapter.RecipeAdapter;
 import edu.cnm.deepdive.smartcheff.controller.MainViewModel;
 import edu.cnm.deepdive.smartcheff.databinding.FragmentRecipesBinding;
@@ -46,7 +47,9 @@ public class RecipesFragment extends Fragment {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RecipeDto recipe = (RecipeDto) parent.getItemAtPosition(position);
-
+        Navigation.findNavController(getView()).navigate(
+            RecipesFragmentDirections.showDetails(recipe.getId())
+        );
         // TODO get recipe details
 
       }
