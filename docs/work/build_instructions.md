@@ -1,9 +1,8 @@
 ### Steps to clone in Intelli J Idea and build:
 
-1. From the main menu, choose VCS | Get from Version Control.
-2. In the Get from Version Control dialog, choose GitHub on the left.
-3. Specify the URL of the repository that you want to clone. You can select a repository from the list of all GitHub projects associated with your account, and the organization that your account belongs to.
-4. [project url for a clone:](git@github.com:Alex-Garber/smart-cheff.git) git@github.com:Alex-Garber/smart-cheff.git
-5. In the Directory field, enter the path to the folder where your local Git repository will be created.
-6. Click Clone. If you want to create a project based on these sources, click Yes in the confirmation dialog. IntelliJ IDEA will automatically set Git root mapping to the project root directory.
-7. Select the Build menu from the top toolbar and select build project or simply select the green triangle in the second toolbar from the top. 
+1. From the [SmartCheff GitHub repository](https://github.com/Alex-Garber/smart-cheff), click on the green Code button, make sure SSH is selected, and click the clipboard icon.
+2. In Android Studio or IntelliJ IDEA, create a new project from version control. Make sure the version control is set to Git, and paste the link copied from [SmartCheff GitHub repository](https://github.com/Alex-Garber/smart-cheff) into the URL field. After selecting your desired project location, click on clone.
+3. After the project has fully loaded, run the application on the device of your choice. You may need to select the device, and the application from a pulldown if they do not initially show up. Note that the app is not designed for use in the landscape orientation.
+   
+  
+ 
